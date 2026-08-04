@@ -60,6 +60,16 @@
             "domId": "cta-contact",
             "targetPageId": "page-contact",
             "hideEdge": true
+          },
+          {
+            "domId": "nav-blog",
+            "targetPageId": "page-blog",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-resources",
+            "targetPageId": "page-resources",
+            "hideEdge": true
           }
         ]
       }
@@ -114,6 +124,16 @@
             "domId": "cta-quote",
             "targetPageId": "page-contact",
             "transitionLabel": "获取报价"
+          },
+          {
+            "domId": "nav-blog",
+            "targetPageId": "page-blog",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-resources",
+            "targetPageId": "page-resources",
+            "hideEdge": true
           }
         ]
       }
@@ -168,6 +188,16 @@
             "domId": "cta-quote",
             "targetPageId": "page-contact",
             "transitionLabel": "联系我们"
+          },
+          {
+            "domId": "nav-blog",
+            "targetPageId": "page-blog",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-resources",
+            "targetPageId": "page-resources",
+            "hideEdge": true
           }
         ]
       }
@@ -227,6 +257,16 @@
             "domId": "cta-submit-requirements",
             "targetPageId": "page-contact",
             "transitionLabel": "提交需求"
+          },
+          {
+            "domId": "nav-blog",
+            "targetPageId": "page-blog",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-resources",
+            "targetPageId": "page-resources",
+            "hideEdge": true
           }
         ]
       }
@@ -285,6 +325,16 @@
           {
             "domId": "cta-submit-quote",
             "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-blog",
+            "targetPageId": "page-blog",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-resources",
+            "targetPageId": "page-resources",
             "hideEdge": true
           }
         ]
@@ -541,11 +591,76 @@
       "devMetadata": {
         "imageSrc": "assets/cat-sportswear.jpg"
       }
+    },
+    {
+      "id": "page-blog",
+      "title": "新闻资讯",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 4809,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 2400,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-new-page-blog",
+          "measuredAt": 1785864000000
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/blog.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "page-resources",
+      "title": "资源下载",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 620,
+        "y": 4809,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 2400,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-new-page-resources",
+          "measuredAt": 1785864000000
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/resources.html",
+        "interactions": []
+      }
+    },
+    {
+      "id": "image-015",
+      "title": "公司地址地图占位图",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 8680,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/map-placeholder.jpg"
+      }
     }
   ],
   "config": {
     "autoLayout": true,
     "deviceType": "desktop",
-    "projectName": "服装制造工厂官网"
+    "projectName": "服装制造工厂官网",
+    "showEdge": true
   }
 }

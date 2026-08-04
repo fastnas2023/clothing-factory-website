@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源下载 — VASTURE 华盛智造</title>
+    <style id="theme-vars">
+/* ============================================================
+   Clothing Factory Website — Brand CSS
+   Deep Ocean Blue + Warm Cream + Charcoal
+   Prefix: cf (clothing-factory)
+   ============================================================ */
+
+/* ---- Brand Color Scale (single hue: deep ocean blue) ---- */
+:root {
+  /* Brand primary scale */
+  --cf-brand-50:  #E8F0F5;
+  --cf-brand-100: #C8DBE6;
+  --cf-brand-200: #9CBFD2;
+  --cf-brand-300: #7A9CB5;
+  --cf-brand-400: #5B7F99;
+  --cf-brand-500: #40647E;
+  --cf-brand-600: #2D4D66;
+  --cf-brand-700: #143D66;
+  --cf-brand-800: #0F2E4F;
+  --cf-brand-900: #091F38;
+
+  /* Neutral scale (warm gray) */
+  --cf-neutral-0:  #FFFFFF;
+  --cf-neutral-50: #F5F5F2;
+  --cf-neutral-100: #EDEDE8;
+  --cf-neutral-200: #E0E0DC;
+  --cf-neutral-300: #D0D0CC;
+  --cf-neutral-400: #B0B0AC;
+  --cf-neutral-500: #8A8A86;
+  --cf-neutral-600: #6B6B6B;
+  --cf-neutral-700: #4A4A4A;
+  --cf-neutral-800: #2A2A2A;
+  --cf-neutral-850: #1F1F1F;
+  --cf-neutral-900: #1A1A1A;
+  --cf-neutral-950: #111111;
+
+  /* Dark surface scale (for dark sections) */
+  --cf-dark-surface: #1A1A1A;
+  --cf-dark-surface-2: #2A2A2A;
+  --cf-dark-surface-3: #333333;
+  --cf-dark-border: #3A3A3A;
+  --cf-dark-ink: #F0F0EC;
+  --cf-dark-ink-2: #A0A09C;
+  --cf-dark-ink-3: #70706C;
+}
+
+/* ---- Light Mode Semantic Tokens ---- */
+:root {
+  --cf-background: var(--cf-neutral-50);
+  --cf-foreground: var(--cf-neutral-900);
+  --cf-card: var(--cf-neutral-0);
+  --cf-card-foreground: var(--cf-neutral-900);
+  --cf-popover: var(--cf-neutral-0);
+  --cf-popover-foreground: var(--cf-neutral-900);
+  --cf-primary: var(--cf-brand-700);
+  --cf-primary-foreground: var(--cf-neutral-0);
+  --cf-muted: var(--cf-neutral-100);
+  --cf-muted-foreground: var(--cf-neutral-600);
+  --cf-border: var(--cf-neutral-200);
+  --cf-input: var(--cf-neutral-200);
+  --cf-ring: var(--cf-brand-700);
+
+  /* Extended semantic aliases */
+  --cf-surface: var(--cf-neutral-0);
+  --cf-surface-2: var(--cf-neutral-100);
+  --cf-ink: var(--cf-neutral-900);
+  --cf-ink-2: var(--cf-neutral-600);
+  --cf-ink-3: var(--cf-neutral-400);
+  --cf-line: var(--cf-neutral-200);
+  --cf-brand: var(--cf-brand-700);
+  --cf-brand-ink: var(--cf-neutral-0);
+  --cf-brand-tint: var(--cf-brand-50);
+
+  /* Dark section tokens (for inverted sections) */
+  --cf-dark-bg: var(--cf-neutral-900);
+  --cf-dark-card: var(--cf-dark-surface-2);
+  --cf-dark-card-fg: var(--cf-dark-ink);
+  --cf-dark-border-c: var(--cf-dark-border);
+  --cf-dark-muted: var(--cf-dark-ink-2);
+
+  /* Static shadow alpha corrected to <=0.05 */
+  --cf-shadow-1: 0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03);
+  --cf-shadow-2: 0 8px 24px -8px rgba(15,23,42,0.05);
+  --cf-shadow-3: 0 24px 60px -20px rgba(15,23,42,0.05);
+
+  /* Radius scale (restrained) */
+  --cf-radius-small: 4px;
+  --cf-radius-medium: 8px;
+  --cf-radius-large: 16px;
+  --cf-radius-full: 9999px;
+
+  --cf-radius-xs: 2px;
+  --cf-radius-sm: 4px;
+  --cf-radius-md: 8px;
+  --cf-radius-lg: 16px;
+  --cf-radius-pill: 9999px;
+
+  /* Shadow scale */
+  /* State colors (semantic only) */
+  --state-success: #2D7A4E;
+  --state-warning: #B8860B;
+  --state-error: #C0392B;
+  --state-info: #143D66;
+}
+
+/* ---- Dark Mode Semantic Tokens ---- */
+html.dark {
+  --cf-background: #111111;
+  --cf-foreground: #F0F0EC;
+  --cf-card: #1F1F1F;
+  --cf-card-foreground: #F0F0EC;
+  --cf-popover: #1F1F1F;
+  --cf-popover-foreground: #F0F0EC;
+  --cf-primary: var(--cf-brand-300);
+  --cf-primary-foreground: var(--cf-neutral-900);
+  --cf-muted: #2A2A2A;
+  --cf-muted-foreground: #A0A09C;
+  --cf-border: #3A3A3A;
+  --cf-input: #3A3A3A;
+  --cf-ring: var(--cf-brand-300);
+
+  --cf-surface: #1F1F1F;
+  --cf-surface-2: #2A2A2A;
+  --cf-ink: #F0F0EC;
+  --cf-ink-2: #A0A09C;
+  --cf-ink-3: #70706C;
+  --cf-line: #3A3A3A;
+  --cf-brand: var(--cf-brand-300);
+  --cf-brand-ink: var(--cf-neutral-900);
+  --cf-brand-tint: #1F2F25;
+}
+
+/* ---- Typography System ---- */
+:root {
+  /* Latin-first stack for English, with CJK fallback */
+  --cf-font-sans: "Inter", "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  /* CJK-first stack for Chinese text */
+  --cf-font-cjk: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Inter", system-ui, -apple-system, sans-serif;
+  /* Monospace */
+  --cf-font-mono: "JetBrains Mono", "SF Mono", "Cascadia Code", "Consolas", monospace;
+
+  /* Type scale */
+  --cf-text-display: clamp(40px, 6vw, 72px);
+  --cf-text-h1: clamp(28px, 3.5vw, 48px);
+  --cf-text-h2: clamp(22px, 2.4vw, 32px);
+  --cf-text-h3: 20px;
+  --cf-text-body-l: 18px;
+  --cf-text-body: 15px;
+  --cf-text-caption: 13px;
+  --cf-text-mono: 13px;
+
+  /* Line heights */
+  --cf-lh-display: 1.05;
+  --cf-lh-heading: 1.2;
+  --cf-lh-body: 1.6;
+  --cf-lh-tight: 1.3;
+
+  /* Font weights */
+  --cf-fw-regular: 400;
+  --cf-fw-medium: 500;
+  --cf-fw-semibold: 600;
+  --cf-fw-bold: 700;
+
+  /* Letter spacing */
+  --cf-tracking-display: -0.03em;
+  --cf-tracking-heading: -0.02em;
+  --cf-tracking-body: 0;
+  --cf-tracking-caption: 0.01em;
+
+  /* Spacing (8pt grid) */
+  --cf-s-1: 4px;
+  --cf-s-2: 8px;
+  --cf-s-3: 12px;
+  --cf-s-4: 16px;
+  --cf-s-5: 24px;
+  --cf-s-6: 32px;
+  --cf-s-7: 48px;
+  --cf-s-8: 80px;
+  --cf-s-9: 120px;
+}
+
+/* ---- Base Reset & Typography Classes ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--cf-font-sans);
+  font-size: var(--cf-text-body);
+  line-height: var(--cf-lh-body);
+  color: var(--cf-foreground);
+  background-color: var(--cf-background);
+  font-weight: var(--cf-fw-regular);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Typography utility classes */
+.cf-display {
+  font-size: var(--cf-text-display);
+  line-height: var(--cf-lh-display);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-display);
+  text-wrap: balance;
+}
+
+.cf-h1 {
+  font-size: var(--cf-text-h1);
+  line-height: var(--cf-lh-heading);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+  text-wrap: balance;
+}
+
+.cf-h2 {
+  font-size: var(--cf-text-h2);
+  line-height: var(--cf-lh-heading);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+  text-wrap: balance;
+}
+
+.cf-h3 {
+  font-size: var(--cf-text-h3);
+  line-height: var(--cf-lh-tight);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+}
+
+.cf-body-l {
+  font-size: var(--cf-text-body-l);
+  line-height: var(--cf-lh-body);
+  font-weight: var(--cf-fw-regular);
+}
+
+.cf-body {
+  font-size: var(--cf-text-body);
+  line-height: var(--cf-lh-body);
+  font-weight: var(--cf-fw-regular);
+}
+
+.cf-caption {
+  font-size: var(--cf-text-caption);
+  line-height: 1.5;
+  font-weight: var(--cf-fw-regular);
+  letter-spacing: var(--cf-tracking-caption);
+}
+
+.cf-mono {
+  font-family: var(--cf-font-mono);
+  font-size: var(--cf-text-mono);
+  font-weight: var(--cf-fw-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tabular nums for data */
+.cf-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Component Utility Classes ---- */
+
+/* Buttons */
+.cf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cf-s-2);
+  padding: 12px 24px;
+  font-size: var(--cf-text-body);
+  font-weight: var(--cf-fw-semibold);
+  line-height: 1;
+  border-radius: var(--cf-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cf-btn-primary {
+  background-color: var(--cf-primary);
+  color: var(--cf-primary-foreground);
+}
+
+.cf-btn-primary:hover {
+  background-color: var(--cf-brand-800);
+  transform: translateY(-1px);
+}
+
+.cf-btn-primary:active {
+  transform: translateY(0);
+}
+
+.cf-btn-secondary {
+  background-color: transparent;
+  color: var(--cf-foreground);
+  border: 1px solid var(--cf-border);
+}
+
+.cf-btn-secondary:hover {
+  background-color: var(--cf-muted);
+  border-color: var(--cf-neutral-400);
+}
+
+.cf-btn-ghost {
+  background-color: transparent;
+  color: var(--cf-primary);
+  padding: 12px 0;
+}
+
+.cf-btn-ghost:hover {
+  color: var(--cf-brand-800);
+}
+
+/* Cards */
+.cf-card {
+  background-color: var(--cf-card);
+  border-radius: var(--cf-radius-lg);
+  border: 1px solid var(--cf-border);
+  overflow: hidden;
+  transition: all 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Tags */
+.cf-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: var(--cf-fw-medium);
+  border-radius: var(--cf-radius-md);
+  background-color: var(--cf-muted);
+  color: var(--cf-muted-foreground);
+}
+
+.cf-tag-brand {
+  background-color: var(--cf-brand-50);
+  color: var(--cf-brand-700);
+}
+
+/* Container */
+.cf-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Section spacing */
+.cf-section {
+  padding: 80px 0;
+}
+
+/* Divider */
+.cf-divider {
+  height: 1px;
+  background-color: var(--cf-line);
+  border: none;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid var(--cf-ring);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--cf-background);
+    --color-foreground: var(--cf-foreground);
+    --color-card: var(--cf-card);
+    --color-card-foreground: var(--cf-card-foreground);
+    --color-popover: var(--cf-popover);
+    --color-popover-foreground: var(--cf-popover-foreground);
+    --color-primary: var(--cf-primary);
+    --color-primary-foreground: var(--cf-primary-foreground);
+    --color-muted: var(--cf-muted);
+    --color-muted-foreground: var(--cf-muted-foreground);
+    --color-border: var(--cf-border);
+    --color-input: var(--cf-input);
+    --color-ring: var(--cf-ring);
+    --radius-sm: var(--cf-radius-sm);
+    --radius-md: var(--cf-radius-md);
+    --radius-lg: var(--cf-radius-lg);
+  }
+  @layer base {
+    body { background: var(--cf-background); color: var(--cf-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--cf-background); }
+      .text-background { color: var(--cf-background); }
+      .border-background { border-color: var(--cf-background); }
+      .ring-background { --tw-ring-color: var(--cf-background); }
+      .bg-foreground { background-color: var(--cf-foreground); }
+      .text-foreground { color: var(--cf-foreground); }
+      .border-foreground { border-color: var(--cf-foreground); }
+      .ring-foreground { --tw-ring-color: var(--cf-foreground); }
+      .bg-card { background-color: var(--cf-card); }
+      .text-card { color: var(--cf-card); }
+      .border-card { border-color: var(--cf-card); }
+      .ring-card { --tw-ring-color: var(--cf-card); }
+      .bg-card-foreground { background-color: var(--cf-card-foreground); }
+      .text-card-foreground { color: var(--cf-card-foreground); }
+      .border-card-foreground { border-color: var(--cf-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--cf-card-foreground); }
+      .bg-popover { background-color: var(--cf-popover); }
+      .text-popover { color: var(--cf-popover); }
+      .border-popover { border-color: var(--cf-popover); }
+      .ring-popover { --tw-ring-color: var(--cf-popover); }
+      .bg-popover-foreground { background-color: var(--cf-popover-foreground); }
+      .text-popover-foreground { color: var(--cf-popover-foreground); }
+      .border-popover-foreground { border-color: var(--cf-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--cf-popover-foreground); }
+      .bg-primary { background-color: var(--cf-primary); }
+      .text-primary { color: var(--cf-primary); }
+      .border-primary { border-color: var(--cf-primary); }
+      .ring-primary { --tw-ring-color: var(--cf-primary); }
+      .bg-primary-foreground { background-color: var(--cf-primary-foreground); }
+      .text-primary-foreground { color: var(--cf-primary-foreground); }
+      .border-primary-foreground { border-color: var(--cf-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--cf-primary-foreground); }
+      .bg-muted { background-color: var(--cf-muted); }
+      .text-muted { color: var(--cf-muted); }
+      .border-muted { border-color: var(--cf-muted); }
+      .ring-muted { --tw-ring-color: var(--cf-muted); }
+      .bg-muted-foreground { background-color: var(--cf-muted-foreground); }
+      .text-muted-foreground { color: var(--cf-muted-foreground); }
+      .border-muted-foreground { border-color: var(--cf-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--cf-muted-foreground); }
+      .bg-border { background-color: var(--cf-border); }
+      .text-border { color: var(--cf-border); }
+      .border-border { border-color: var(--cf-border); }
+      .ring-border { --tw-ring-color: var(--cf-border); }
+      .bg-input { background-color: var(--cf-input); }
+      .text-input { color: var(--cf-input); }
+      .border-input { border-color: var(--cf-input); }
+      .ring-input { --tw-ring-color: var(--cf-input); }
+      .bg-ring { background-color: var(--cf-ring); }
+      .text-ring { color: var(--cf-ring); }
+      .border-ring { border-color: var(--cf-ring); }
+      .ring-ring { --tw-ring-color: var(--cf-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body>
+<style id="critical-layout">
+  /* ============================================================
+     Critical layout — Resources Page (survives without Tailwind)
+     ============================================================ */
+
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
+
+  .cf-container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---- Page Hero ---- */
+  .cf-page-hero {
+    position: relative;
+    padding: 152px 0 96px;
+    color: var(--cf-neutral-0);
+    background:
+      linear-gradient(110deg, rgba(9,31,56,0.92) 0%, rgba(9,31,56,0.72) 48%, rgba(20,61,102,0.82) 100%),
+      url("../assets/hero-workwear-factory.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .cf-page-hero-inner { max-width: 760px; }
+
+  .cf-page-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px;
+    padding: 0 14px;
+    border-radius: var(--cf-radius-full);
+    background: rgba(255,255,255,0.12);
+    color: var(--cf-neutral-0);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .cf-page-hero-title {
+    font-size: var(--cf-text-h1);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    word-break: keep-all;
+    margin-bottom: 20px;
+    color: var(--cf-neutral-0);
+  }
+  .cf-page-hero-sub {
+    font-size: var(--cf-text-body-l);
+    line-height: 1.6;
+    color: rgba(255,255,255,0.82);
+    max-width: 680px;
+    text-wrap: pretty;
+  }
+
+  /* ---- Section header ---- */
+  .cf-sec-head { max-width: 760px; margin-bottom: 56px; }
+  .cf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cf-primary);
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+  }
+  .cf-eyebrow-line { display: inline-block; width: 24px; height: 2px; background: var(--cf-primary); }
+  .cf-sec-title {
+    font-size: var(--cf-text-h2);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    word-break: keep-all;
+    color: var(--cf-foreground);
+  }
+  .cf-sec-desc {
+    font-size: var(--cf-text-body-l);
+    line-height: 1.6;
+    color: var(--cf-muted-foreground);
+    margin-top: 16px;
+    max-width: 640px;
+    text-wrap: pretty;
+  }
+
+  /* ---- Knowledge Section ---- */
+  .cf-knowledge { background: var(--cf-background); padding: 96px 0; }
+  .cf-knowledge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .cf-knowledge-card {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--cf-radius-lg);
+    padding: 32px;
+    transition: transform 200ms cubic-bezier(.2,.8,.2,1), border-color 200ms cubic-bezier(.2,.8,.2,1), box-shadow 200ms cubic-bezier(.2,.8,.2,1);
+  }
+  .cf-knowledge-card:hover { transform: translateY(-2px); border-color: var(--cf-brand-300); box-shadow: var(--cf-shadow-2); }
+  .cf-knowledge-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--cf-radius-md);
+    background: var(--cf-brand-50);
+    color: var(--cf-brand-700);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .cf-knowledge-title { font-size: 18px; font-weight: 600; color: var(--cf-foreground); margin-bottom: 10px; letter-spacing: -0.01em; }
+  .cf-knowledge-desc { font-size: 14px; color: var(--cf-muted-foreground); line-height: 1.6; margin-bottom: 18px; }
+  .cf-knowledge-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cf-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 150ms cubic-bezier(.2,.8,.2,1), color 150ms;
+  }
+  .cf-knowledge-link:hover { color: var(--cf-brand-800); gap: 10px; }
+
+  /* ---- Downloads Section ---- */
+  .cf-downloads { background: var(--cf-neutral-0); padding: 96px 0; }
+  .cf-downloads-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .cf-download-card {
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--cf-radius-lg);
+    padding: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: transform 200ms cubic-bezier(.2,.8,.2,1), border-color 200ms cubic-bezier(.2,.8,.2,1), box-shadow 200ms cubic-bezier(.2,.8,.2,1);
+  }
+  .cf-download-card:hover { transform: translateY(-2px); border-color: var(--cf-brand-300); box-shadow: var(--cf-shadow-2); }
+  .cf-download-icon {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--cf-radius-md);
+    background: var(--cf-brand-50);
+    color: var(--cf-brand-700);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cf-download-body { flex: 1; min-width: 0; }
+  .cf-download-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+    padding: 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: var(--cf-radius-sm);
+    background: var(--cf-brand-700);
+    color: var(--cf-neutral-0);
+    margin-bottom: 10px;
+  }
+  .cf-download-title { font-size: 17px; font-weight: 600; color: var(--cf-foreground); margin-bottom: 8px; letter-spacing: -0.01em; }
+  .cf-download-desc { font-size: 14px; color: var(--cf-muted-foreground); line-height: 1.5; margin-bottom: 14px; }
+  .cf-download-meta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .cf-download-size { font-size: 13px; color: var(--cf-ink-3); font-variant-numeric: tabular-nums; }
+  .cf-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--cf-radius-md);
+    background: var(--cf-primary);
+    color: var(--cf-primary-foreground);
+    text-decoration: none;
+    transition: background-color 150ms cubic-bezier(.2,.8,.2,1), transform 150ms cubic-bezier(.2,.8,.2,1);
+    white-space: nowrap;
+  }
+  .cf-download-btn:hover { background: var(--cf-brand-800); transform: translateY(-1px); }
+
+  /* ---- Size Chart Section ---- */
+  .cf-sizechart { background: var(--cf-background); padding: 96px 0; }
+  .cf-sizechart-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+  .cf-sizechart-block {}
+  .cf-sizechart-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--cf-foreground);
+    margin-bottom: 18px;
+  }
+  .cf-sizechart-label svg { color: var(--cf-primary); }
+  .cf-sizechart-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--cf-card);
+    border: 1px solid var(--cf-border);
+    border-radius: var(--cf-radius-lg);
+    overflow: hidden;
+  }
+  .cf-sizechart-table th,
+  .cf-sizechart-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--cf-border);
+  }
+  .cf-sizechart-table th {
+    background: var(--cf-brand-50);
+    color: var(--cf-brand-700);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cf-sizechart-table tr:last-child td { border-bottom: none; }
+  .cf-sizechart-table td { color: var(--cf-foreground); }
+  .cf-sizechart-note { font-size: 13px; color: var(--cf-muted-foreground); margin-top: 14px; }
+
+  /* ---- CTA ---- */
+  .cf-cta { background: var(--cf-brand-700); color: var(--cf-neutral-0); padding: 104px 0; text-align: center; }
+  .cf-cta-inner { max-width: 720px; margin: 0 auto; }
+  .cf-cta-title {
+    font-size: var(--cf-text-h2);
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    word-break: keep-all;
+    color: var(--cf-neutral-0);
+    margin-bottom: 16px;
+  }
+  .cf-cta-desc { font-size: var(--cf-text-body-l); line-height: 1.6; color: rgba(255,255,255,0.85); margin-bottom: 36px; }
+  .cf-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 34px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: var(--cf-radius-md);
+    background: var(--cf-neutral-0);
+    color: var(--cf-brand-700);
+    text-decoration: none;
+    transition: transform 150ms cubic-bezier(.2,.8,.2,1), background-color 150ms cubic-bezier(.2,.8,.2,1);
+  }
+  .cf-cta-btn:hover { transform: translateY(-1px); background: var(--cf-brand-50); }
+
+  /* ---- Hero entrance ---- */
+  @keyframes cf-fade-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .cf-page-hero-inner > * { opacity: 0; animation: cf-fade-up 0.6s cubic-bezier(.3,0,0,1) forwards; }
+  .cf-page-hero-inner > *:nth-child(1) { animation-delay: 0.08s; }
+  .cf-page-hero-inner > *:nth-child(2) { animation-delay: 0.18s; }
+  .cf-page-hero-inner > *:nth-child(3) { animation-delay: 0.28s; }
+
+  /* ---- Language switcher ---- */
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cf-muted-foreground);
+    margin-left: 24px;
+  }
+  .lang-switcher a { color: var(--cf-muted-foreground); text-decoration: none; transition: color 150ms; }
+  .lang-switcher a:hover { color: var(--cf-primary); }
+  .lang-switcher .active { color: var(--cf-primary); font-weight: 600; }
+  .lang-switcher .divider { color: var(--cf-neutral-400); }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1024px) {
+    .cf-knowledge-grid { grid-template-columns: repeat(2, 1fr); }
+    .cf-downloads-grid { grid-template-columns: 1fr; }
+    .cf-sizechart-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 720px) {
+    .cf-container { padding: 0 20px; }
+    .cf-page-hero { padding: 128px 0 72px; }
+    .cf-knowledge-grid { grid-template-columns: 1fr; }
+    .cf-download-card { flex-direction: column; }
+    .cf-download-meta { width: 100%; }
+    .cf-sizechart-table th,
+    .cf-sizechart-table td { padding: 12px 14px; font-size: 13px; }
+    footer .cf-container > div:first-child { grid-template-columns: 1fr !important; gap: 32px !important; }
+  }
+  @media (max-width: 900px) {
+    .site-header nav { display: none !important; }
+    .site-header .header-right { display: none !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cf-page-hero-inner > * { opacity: 1 !important; animation: none !important; }
+  }
+</style>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<header class="site-header" style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,245,242,0.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--cf-border);">
+  <div class="cf-container" style="display:flex;align-items:center;justify-content:space-between;height:72px;">
+    <a href="home.html" class="logo-link" style="display:flex;flex-direction:column;text-decoration:none;" data-dom-id="nav-home">
+      <span style="font-size:20px;font-weight:700;color:var(--cf-foreground);letter-spacing:-0.02em;">VASTURE</span>
+      <span style="font-size:11px;color:var(--cf-muted-foreground);letter-spacing:0.05em;">华盛智造 · GARMENT MFG</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:36px;">
+      <a href="home.html" style="font-size:15px;font-weight:400;color:var(--cf-muted-foreground);text-decoration:none;" data-dom-id="nav-home">首页</a>
+      <a href="products.html" style="font-size:15px;font-weight:400;color:var(--cf-muted-foreground);text-decoration:none;" data-dom-id="nav-products">产品中心</a>
+      <a href="factory.html" style="font-size:15px;font-weight:400;color:var(--cf-muted-foreground);text-decoration:none;" data-dom-id="nav-factory">工厂实力</a>
+      <a href="services.html" style="font-size:15px;font-weight:400;color:var(--cf-muted-foreground);text-decoration:none;" data-dom-id="nav-services">定制服务</a>
+      <a href="resources.html" style="font-size:15px;font-weight:600;color:var(--cf-primary);text-decoration:none;position:relative;" data-dom-id="nav-resources">资源下载</a>
+      <a href="contact.html" style="font-size:15px;font-weight:400;color:var(--cf-muted-foreground);text-decoration:none;" data-dom-id="nav-contact">联系我们</a>
+    </nav>
+    <div class="header-right" style="display:flex;align-items:center;gap:16px;">
+      <div class="lang-switcher">
+        <span class="active">中</span>
+        <span class="divider">/</span>
+        <a href="../en/resources.html">EN</a>
+      </div>
+      <a href="contact.html" class="cf-btn cf-btn-primary" style="padding:10px 20px;font-size:14px;" data-dom-id="cta-quote">获取报价</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. Page Hero -->
+  <section class="cf-page-hero" aria-label="资源下载页面主视觉">
+    <div class="cf-container">
+      <div class="cf-page-hero-inner">
+        <span class="cf-page-hero-badge">免费技术资料 · 助力高效生产</span>
+        <h1 class="cf-page-hero-title">面料知识库 & 下载中心</h1>
+        <p class="cf-page-hero-sub">免费提供面料参数、尺码规格、生产工艺等技术资料下载，帮助客户快速了解服装制造全链路。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 面料知识库 -->
+  <section class="cf-knowledge" aria-label="面料知识库">
+    <div class="cf-container">
+      <div class="cf-sec-head">
+        <div class="cf-eyebrow"><span class="cf-eyebrow-line"></span>面料知识库</div>
+        <h2 class="cf-sec-title">常见面料分类与特性</h2>
+        <p class="cf-sec-desc">从天然纤维到功能性面料，掌握不同材质的特点与适用场景，为产品开发和采购决策提供专业参考。</p>
+      </div>
+      <div class="cf-knowledge-grid">
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.74 5.88a1 1 0 0 1 .26.63v9.3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-9.3a1 1 0 0 1 .26-.63L12 2.69z"/><path d="M12 22v-9"/><path d="m9 22 3-3 3 3"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">棉质面料</h3>
+          <p class="cf-knowledge-desc">透气吸湿、亲肤柔软，适用于T恤、衬衫、家居服等日常基础款，支持有机棉与混纺方案。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 22a2.5 2.5 0 0 1 0-5h11a2.5 2.5 0 0 1 0 5z"/><path d="M12 2v15"/><path d="M7 7h10"/><path d="M8 11h8"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">涤纶与混纺</h3>
+          <p class="cf-knowledge-desc">抗皱耐磨、色牢度高，常与棉、氨纶混纺，适合运动服、工装及快时尚批量订单。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20"/><path d="M2 12c2 2 4 4 8 4s6-6 10-6"/><path d="M2 12c2-2 4-4 8-4s6 6 10 6"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">针织面料</h3>
+          <p class="cf-knowledge-desc">弹性好、贴合度高，涵盖单面针织、双面针织、罗纹等，广泛应用于卫衣、T恤与打底衫。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">功能性面料</h3>
+          <p class="cf-knowledge-desc">具备防水、速干、抗菌、防晒、凉感等功能，满足户外运动、专业工装及特殊场景需求。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.4a1.6 1.6 0 0 0-2.29.28l-1.86 2.48V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h2.8l-1.18 1.57a1.6 1.6 0 0 0 2.29 2.23l14.86-19.8a1.6 1.6 0 0 0-.39-2.6z"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">牛仔面料</h3>
+          <p class="cf-knowledge-desc">从轻薄弹力牛仔到重磅原色牛仔，提供水洗、磨白、猫须等工艺，适配裤装、外套与裙装。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+        <article class="cf-knowledge-card">
+          <div class="cf-knowledge-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12a4 4 0 0 1 4-4"/><path d="M12 16a4 4 0 0 0 4-4"/></svg>
+          </div>
+          <h3 class="cf-knowledge-title">亚麻面料</h3>
+          <p class="cf-knowledge-desc">天然环保、散热透气，具有独特肌理感，常用于夏季衬衫、裤装及高端休闲服饰。</p>
+          <a class="cf-knowledge-link" href="#">查看详情 <span>→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 常用下载 -->
+  <section class="cf-downloads" aria-label="常用下载">
+    <div class="cf-container">
+      <div class="cf-sec-head">
+        <div class="cf-eyebrow"><span class="cf-eyebrow-line"></span>常用下载</div>
+        <h2 class="cf-sec-title">模板与标准手册</h2>
+        <p class="cf-sec-desc">下载生产所需的常用表格与手册，加速产品确认与订单对接流程。</p>
+      </div>
+      <div class="cf-downloads-grid">
+        <article class="cf-download-card">
+          <div class="cf-download-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M8 13h2"/><path d="M8 17h2"/><path d="M14 13h2"/><path d="M14 17h2"/></svg>
+          </div>
+          <div class="cf-download-body">
+            <span class="cf-download-badge">XLSX</span>
+            <h3 class="cf-download-title">尺码表模板</h3>
+            <p class="cf-download-desc">男女装、童装常用尺码表模板，包含胸围、腰围、衣长等关键尺寸字段，可直接填写使用。</p>
+            <div class="cf-download-meta">
+              <span class="cf-download-size">文件大小：128 KB</span>
+              <a class="cf-download-btn" href="#" download>立即下载</a>
+            </div>
+          </div>
+        </article>
+        <article class="cf-download-card">
+          <div class="cf-download-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <div class="cf-download-body">
+            <span class="cf-download-badge">PDF</span>
+            <h3 class="cf-download-title">面料色卡申请</h3>
+            <p class="cf-download-desc">面料色卡申请指南，包含申请流程、可选面料品类与邮寄方式说明。</p>
+            <div class="cf-download-meta">
+              <span class="cf-download-size">文件大小：2.4 MB</span>
+              <a class="cf-download-btn" href="#" download>立即下载</a>
+            </div>
+          </div>
+        </article>
+        <article class="cf-download-card">
+          <div class="cf-download-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <div class="cf-download-body">
+            <span class="cf-download-badge">DOCX</span>
+            <h3 class="cf-download-title">OEM/ODM需求表</h3>
+            <p class="cf-download-desc">定制订单需求收集表，涵盖款式图、面料要求、工艺说明、交期与数量等核心信息。</p>
+            <div class="cf-download-meta">
+              <span class="cf-download-size">文件大小：85 KB</span>
+              <a class="cf-download-btn" href="#" download>立即下载</a>
+            </div>
+          </div>
+        </article>
+        <article class="cf-download-card">
+          <div class="cf-download-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg>
+          </div>
+          <div class="cf-download-body">
+            <span class="cf-download-badge">PDF</span>
+            <h3 class="cf-download-title">质检标准手册</h3>
+            <p class="cf-download-desc">成品检验标准与AQL抽样规范，帮助客户明确验货要求与质量判定依据。</p>
+            <div class="cf-download-meta">
+              <span class="cf-download-size">文件大小：4.1 MB</span>
+              <a class="cf-download-btn" href="#" download>立即下载</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 尺码换算表 -->
+  <section class="cf-sizechart" aria-label="尺码换算表">
+    <div class="cf-container">
+      <div class="cf-sec-head">
+        <div class="cf-eyebrow"><span class="cf-eyebrow-line"></span>尺码换算表</div>
+        <h2 class="cf-sec-title">国际尺码快速对照</h2>
+        <p class="cf-sec-desc">提供上衣与裤装常见尺码的 CN / US / EU / UK 对照，便于跨境订单快速沟通。</p>
+      </div>
+      <div class="cf-sizechart-grid">
+        <div class="cf-sizechart-block">
+          <div class="cf-sizechart-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0v7a6 6 0 0 1-12 0z"/><path d="M12 2v3"/></svg>
+            上衣尺码
+          </div>
+          <table class="cf-sizechart-table">
+            <thead>
+              <tr><th>CN</th><th>US</th><th>EU</th><th>UK</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>S</td><td>XS</td><td>44</td><td>34</td></tr>
+              <tr><td>M</td><td>S</td><td>46</td><td>36</td></tr>
+              <tr><td>L</td><td>M</td><td>48</td><td>38</td></tr>
+              <tr><td>XL</td><td>L</td><td>50</td><td>40</td></tr>
+              <tr><td>XXL</td><td>XL</td><td>52</td><td>42</td></tr>
+            </tbody>
+          </table>
+          <p class="cf-sizechart-note">* 以上为常见对照，具体尺寸请以实物测量为准。</p>
+        </div>
+        <div class="cf-sizechart-block">
+          <div class="cf-sizechart-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+            裤装尺码
+          </div>
+          <table class="cf-sizechart-table">
+            <thead>
+              <tr><th>CN</th><th>US</th><th>EU</th><th>UK</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>28</td><td>28</td><td>44</td><td>28</td></tr>
+              <tr><td>30</td><td>30</td><td>46</td><td>30</td></tr>
+              <tr><td>32</td><td>32</td><td>48</td><td>32</td></tr>
+              <tr><td>34</td><td>34</td><td>50</td><td>34</td></tr>
+              <tr><td>36</td><td>36</td><td>52</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="cf-sizechart-note">* 腰围与臀围数据请结合具体款式版型参考。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA -->
+  <section class="cf-cta" aria-label="获取报价">
+    <div class="cf-container">
+      <div class="cf-cta-inner">
+        <h2 class="cf-cta-title">需要定制面料或成衣方案？</h2>
+        <p class="cf-cta-desc">联系我们的技术团队，获取专业面料推荐与生产报价。</p>
+        <a class="cf-cta-btn" href="contact.html" data-dom-id="cta-contact">联系我们</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 6. Footer -->
+<footer style="background:var(--cf-neutral-900);color:var(--cf-neutral-400);padding:64px 0 32px;">
+  <div class="cf-container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;">
+      <div>
+        <div style="font-size:20px;font-weight:700;color:var(--cf-neutral-0);margin-bottom:12px;">VASTURE</div>
+        <div style="font-size:13px;color:var(--cf-neutral-500);line-height:1.6;max-width:280px;margin-bottom:20px;">华盛智造 · 20年专业服装制造经验，服务全球品牌客户、跨境电商卖家及海外采购商，支持OEM/ODM定制。</div>
+        <div style="display:flex;gap:14px;">
+          <a href="https://www.linkedin.com/company/vasture" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="width:36px;height:36px;border-radius:50%;background:var(--cf-dark-surface-2);display:inline-flex;align-items:center;justify-content:center;color:var(--cf-neutral-400);text-decoration:none;transition:background-color 150ms,color 150ms;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vasture" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;background:var(--cf-dark-surface-2);display:inline-flex;align-items:center;justify-content:center;color:var(--cf-neutral-400);text-decoration:none;transition:background-color 150ms,color 150ms;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/8613800000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="width:36px;height:36px;border-radius:50%;background:var(--cf-dark-surface-2);display:inline-flex;align-items:center;justify-content:center;color:var(--cf-neutral-400);text-decoration:none;transition:background-color 150ms,color 150ms;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a href="mailto:info@vasture.com" aria-label="Email" style="width:36px;height:36px;border-radius:50%;background:var(--cf-dark-surface-2);display:inline-flex;align-items:center;justify-content:center;color:var(--cf-neutral-400);text-decoration:none;transition:background-color 150ms,color 150ms;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--cf-neutral-300);margin-bottom:16px;">产品中心</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;">
+          <a href="products.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">女装系列</a>
+          <a href="products.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">男装系列</a>
+          <a href="products.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">童装系列</a>
+          <a href="products.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">运动服饰</a>
+          <a href="products.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">针织服装</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--cf-neutral-300);margin-bottom:16px;">快速链接</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;">
+          <a href="factory.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">工厂实力</a>
+          <a href="services.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">定制服务</a>
+          <a href="resources.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">资源下载</a>
+          <a href="contact.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">联系我们</a>
+          <a href="home.html" style="color:var(--cf-neutral-500);text-decoration:none;transition:color 150ms;">返回首页</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--cf-neutral-300);margin-bottom:16px;">联系方式</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;">
+          <span>电话: +86 138-0000-0000</span>
+          <span>邮箱: info@vasture.com</span>
+          <span>WhatsApp: +86 138-0000-0000</span>
+          <span>地址: 广东省广州市番禺区</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--cf-dark-border);padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:var(--cf-neutral-600);">
+      <span>© 2024 VASTURE 华盛智造. All rights reserved.</span>
+      <span>粤ICP备2024000000号</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

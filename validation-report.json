@@ -16,10 +16,15 @@
   },
   "operatingMode": "free-explore",
   "renderBlockingErrorCount": 0,
-  "softWarningCount": 3,
+  "softWarningCount": 8,
   "renderBlockingErrors": [],
   "errorSignatures": [],
   "softWarnings": [
+    "[html-head-style] contact.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] factory.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] home.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] products.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] services.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
     "[repair-ledger] validationRepairLedger[0].repairActions[0].preEditFileHashes[] is missing (legacy optional evidence)",
     "[repair-ledger] validationRepairLedger[0].repairActions[0].postEditFileHashes[] is missing (legacy optional evidence)",
     "[html-quality] services.html: hardcoded colors are forbidden outside <style id=\"theme-vars\">. Use brand CSS variables from the token reference."
@@ -41,9 +46,14 @@
   ],
   "repairActionTable": [],
   "errorCount": 0,
-  "warningCount": 3,
+  "warningCount": 8,
   "errors": [],
   "warnings": [
+    "[html-head-style] contact.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] factory.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] home.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] products.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
+    "[html-head-style] services.html: found 1 custom <style> block(s) in <head>. The <head> is owned by apply-html-head-contract.mjs; move custom styles before </body> or re-run apply-html-head-contract.mjs <css-path> <html-file> --replace-head to relocate them.",
     "[repair-ledger] validationRepairLedger[0].repairActions[0].preEditFileHashes[] is missing (legacy optional evidence)",
     "[repair-ledger] validationRepairLedger[0].repairActions[0].postEditFileHashes[] is missing (legacy optional evidence)",
     "[html-quality] services.html: hardcoded colors are forbidden outside <style id=\"theme-vars\">. Use brand CSS variables from the token reference."
@@ -84,7 +94,7 @@
       "read_status": "loaded"
     },
     "renderBlockingErrorCount": 0,
-    "softWarningCount": 3,
+    "softWarningCount": 8,
     "renderBlockingErrors": [],
     "repairActionTable": [],
     "nextCheck": {
@@ -101,18 +111,21 @@
     ]
   },
   "projectFileHashes": {
-    "clothing-factory-website.design": "612e9b266afe0d04569e4a8d1ac06caf6e3ce033777971fa421985d7c2788a37",
+    "clothing-factory-website.design": "ad7632a3634904250985db335e6fd9b0d1253153e6e19f6e4847498a672270b0",
     "colors_and_type.css": "b010fe1c74c85fde93af4acef6f45466aac3e6ced69dbcd95701eb9ba350ad46",
     "runtime-orchestration-summary.json": "6fd5b5af703b34eca50c19b28fd7afa2e3836d1fddab29131a4ff3c5262f4eb5",
-    "pages/contact.html": "7cff4d4f76b4731d1dcb5a4108c4f8680bf906fd08dbfcf055861da7ff65d444",
-    "pages/factory.html": "0230f66f0783809dbd18e86d781d749e0ad0caafec0aca3935607985af3e2dc7",
-    "pages/home.html": "153327e73028520abcd724b4d700671922fff713d1d4a61756447c4037cdde70",
-    "pages/products.html": "27f04ce18ee1b0e4fca13d17da03b9753aa2a6e206d44869122f67cc30f8e7cb",
-    "pages/services.html": "d175f97e742de2e115dda96f2f346d6979960be9fd1fde01f5a66c4dd42b658b",
+    "pages/blog.html": "303337f9f51aeef9a0b4941f88b7a85583c97f96656af1046d3e63dd75d71dd6",
+    "pages/contact.html": "8bbb0610715a36d4eda73463a15b403f95f3eb463194401236fcbc1d58e2852e",
+    "pages/factory.html": "322b11556752f6092b8ab89c8fb2575911547f7250357c37091131b50423de79",
+    "pages/home.html": "2cc55cd6126ac6b5613c8b1832f32c7256086716bc82169bb91af0975084c37b",
+    "pages/products.html": "4746b3a238de1a0d16af4a97c7c3df69ecaede456e9dacee8dcca14740bf8893",
+    "pages/resources.html": "91a9be424a106b29fc210dbfec07377e081af1141f79665bb86ae4f32abff638",
+    "pages/services.html": "d2adc4c83239ae0a570109ef9f5ab399ba0f92f50a297e6bc891000cb59f86ea",
     "assets/cat-kids.jpg": "2f068c54a714e4f3c00a3a86768b35df03d35396bdc69cf1d7ee4de11264560e",
     "assets/cat-sportswear.jpg": "89e246c9b2663983008045d3dfa2b14ef07bd7f451506259334822737f81298a",
     "assets/hero-factory.jpg": "90b934c04e67273cbddd0f44cd209a953eab8c442124ecb6860e77d1e3eb1f1d",
     "assets/hero-workwear-factory.jpg": "9bcdaa91415bd1ea068e8948fbf58a61d3746e52cd64d19ac7e0299ce055ae3b",
+    "assets/map-placeholder.jpg": "fc21d0ed9d2d042092bb8381572a88fbcccf70d4bbc961a606733ac0de5d3c29",
     "assets/product-dress.jpg": "a650eea6991f23b8874252564997922597a571ea60486e6dd60ee4dfb7774021",
     "assets/product-hoodie.jpg": "cf4ef883c698718145e3cbb4de96d397a9997348f64e5664ee5946f3dea1178b",
     "assets/product-jacket.jpg": "82ce992dd9cacad7abe9894ea12da7b48294a1c132f8a0005d49f9ec820a81ca",
@@ -125,7 +138,7 @@
     "assets/workshop-warehouse.jpg": "0a9db8fd384f218c7f844651057f2e584d14d70b1001a1628212d8170f08f2c3"
   },
   "designDir": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website",
-  "expectedPages": 5,
-  "requireInteractions": "nav-home:home.html,nav-products:products.html,nav-factory:factory.html,nav-services:services.html,nav-contact:contact.html,cta-quote:contact.html,cta-inquire:home.html,cta-contact:home.html,cta-submit-requirements:services.html,cta-submit-quote:contact.html",
-  "checkedAt": "2026-08-04T10:49:04.676Z"
+  "expectedPages": null,
+  "requireInteractions": null,
+  "checkedAt": "2026-08-04T17:38:25.784Z"
 }
