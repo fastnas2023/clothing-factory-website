@@ -1,0 +1,47 @@
+{
+  "root": {
+    "type": "project-shell",
+    "id": "shell",
+    "children": [
+      {
+        "type": "leaf-page",
+        "id": "page-home",
+        "htmlSrc": "pages/home.html",
+        "title": "首页",
+        "pageIndex": 1
+      },
+      {
+        "type": "leaf-page",
+        "id": "page-products",
+        "htmlSrc": "pages/products.html",
+        "title": "产品中心",
+        "pageIndex": 2
+      },
+      {
+        "type": "leaf-page",
+        "id": "page-factory",
+        "htmlSrc": "pages/factory.html",
+        "title": "工厂实力",
+        "pageIndex": 3
+      },
+      {
+        "type": "leaf-page",
+        "id": "page-services",
+        "htmlSrc": "pages/services.html",
+        "title": "定制服务",
+        "pageIndex": 4
+      },
+      {
+        "type": "leaf-page",
+        "id": "page-contact",
+        "htmlSrc": "pages/contact.html",
+        "title": "联系询价",
+        "pageIndex": 5
+      }
+    ]
+  },
+  "sharedFragments": {
+    "nav": "Shared desktop top navigation bar with logo, 7 nav links, and primary CTA button. Passed to each page sub-agent as inline HTML.",
+    "footer": "Shared desktop footer with company info, quick links, contact details, and copyright. Passed to each page sub-agent as inline HTML."
+  }
+}

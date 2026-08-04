@@ -1,0 +1,551 @@
+{
+  "data": [
+    {
+      "id": "page-home",
+      "title": "首页",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 0,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 3751,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-3057d39b",
+          "measuredAt": 1785837646952
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/home.html",
+        "interactions": [
+          {
+            "domId": "nav-home",
+            "targetPageId": "page-home",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-products",
+            "targetPageId": "page-products",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-factory",
+            "targetPageId": "page-factory",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-services",
+            "targetPageId": "page-services",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-quote",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-inquire",
+            "targetPageId": "page-contact",
+            "transitionLabel": "立即询价"
+          },
+          {
+            "domId": "cta-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-products",
+      "title": "产品中心",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 3316,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 2672,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-a8436d47",
+          "measuredAt": 1785837646952
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/products.html",
+        "interactions": [
+          {
+            "domId": "nav-home",
+            "targetPageId": "page-home",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-products",
+            "targetPageId": "page-products",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-factory",
+            "targetPageId": "page-factory",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-services",
+            "targetPageId": "page-services",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-quote",
+            "targetPageId": "page-contact",
+            "transitionLabel": "获取报价"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-factory",
+      "title": "工厂实力",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 2097,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 3790,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-1397068e",
+          "measuredAt": 1785837646952
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/factory.html",
+        "interactions": [
+          {
+            "domId": "nav-home",
+            "targetPageId": "page-home",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-products",
+            "targetPageId": "page-products",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-factory",
+            "targetPageId": "page-factory",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-services",
+            "targetPageId": "page-services",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-quote",
+            "targetPageId": "page-contact",
+            "transitionLabel": "联系我们"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-services",
+      "title": "定制服务",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 1208,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 2657,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-0f24865d",
+          "measuredAt": 1785837646952
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/services.html",
+        "interactions": [
+          {
+            "domId": "nav-home",
+            "targetPageId": "page-home",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-products",
+            "targetPageId": "page-products",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-factory",
+            "targetPageId": "page-factory",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-services",
+            "targetPageId": "page-services",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-quote",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-submit-requirements",
+            "targetPageId": "page-contact",
+            "transitionLabel": "提交需求"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-contact",
+      "title": "联系询价",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 620,
+        "y": 0,
+        "group": 0,
+        "layoutSnapshot": {
+          "version": 1,
+          "contentHeight": 1810,
+          "viewportWidth": 1440,
+          "sourceHash": "fnv1a-7cf86d0f",
+          "measuredAt": 1785837646952
+        }
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/contact.html",
+        "interactions": [
+          {
+            "domId": "nav-home",
+            "targetPageId": "page-home",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-products",
+            "targetPageId": "page-products",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-factory",
+            "targetPageId": "page-factory",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-services",
+            "targetPageId": "page-services",
+            "hideEdge": true
+          },
+          {
+            "domId": "nav-contact",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-quote",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          },
+          {
+            "domId": "cta-submit-quote",
+            "targetPageId": "page-contact",
+            "hideEdge": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "image-001",
+      "title": "工装服生产车间",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 0,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-workwear-factory.jpg"
+      }
+    },
+    {
+      "id": "image-014",
+      "title": "原工厂生产车间（已停用）",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 620,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2560,
+          "height": 1440
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/hero-factory.jpg"
+      }
+    },
+    {
+      "id": "image-002",
+      "title": "裁剪车间",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 1240,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2240,
+          "height": 1680
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/workshop-cutting.jpg"
+      }
+    },
+    {
+      "id": "image-003",
+      "title": "缝制车间",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 1860,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2240,
+          "height": 1680
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/workshop-sewing.jpg"
+      }
+    },
+    {
+      "id": "image-004",
+      "title": "整烫包装",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 2480,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2240,
+          "height": 1680
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/workshop-ironing.jpg"
+      }
+    },
+    {
+      "id": "image-005",
+      "title": "仓储物流",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 3100,
+        "y": 4209,
+        "naturalSize": {
+          "width": 2240,
+          "height": 1680
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/workshop-warehouse.jpg"
+      }
+    },
+    {
+      "id": "image-006",
+      "title": "连帽卫衣",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 3720,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-hoodie.jpg"
+      }
+    },
+    {
+      "id": "image-007",
+      "title": "纯棉T恤",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 4340,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-tee.jpg"
+      }
+    },
+    {
+      "id": "image-008",
+      "title": "飞行员夹克",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 4960,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-jacket.jpg"
+      }
+    },
+    {
+      "id": "image-009",
+      "title": "Polo衫",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 5580,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-polo.jpg"
+      }
+    },
+    {
+      "id": "image-010",
+      "title": "女士连衣裙",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 6200,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-dress.jpg"
+      }
+    },
+    {
+      "id": "image-011",
+      "title": "运动长裤",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 6820,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/product-pants.jpg"
+      }
+    },
+    {
+      "id": "image-012",
+      "title": "童装系列",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 7440,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/cat-kids.jpg"
+      }
+    },
+    {
+      "id": "image-013",
+      "title": "运动系列",
+      "type": "image",
+      "version": 1,
+      "createdAt": 1722768000000,
+      "canvasData": {
+        "x": 8060,
+        "y": 4209,
+        "naturalSize": {
+          "width": 1920,
+          "height": 1920
+        }
+      },
+      "devMetadata": {
+        "imageSrc": "assets/cat-sportswear.jpg"
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": true,
+    "deviceType": "desktop",
+    "projectName": "服装制造工厂官网"
+  }
+}

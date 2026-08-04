@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preflight</title>
+    <style id="theme-vars">
+/* ============================================================
+   Clothing Factory Website — Brand CSS
+   deep ocean blue + Warm Cream + Charcoal
+   Prefix: cf (clothing-factory)
+   ============================================================ */
+
+/* ---- Brand Color Scale (single hue: deep ocean blue) ---- */
+:root {
+  /* Brand primary scale */
+  --cf-brand-50:  #E8F0F5;
+  --cf-brand-100: #C8DBE6;
+  --cf-brand-200: #9CBFD2;
+  --cf-brand-300: #7A9CB5;
+  --cf-brand-400: #5B7F99;
+  --cf-brand-500: #40647E;
+  --cf-brand-600: #2D4D66;
+  --cf-brand-700: #143D66;
+  --cf-brand-800: #0F2E4F;
+  --cf-brand-900: #091F38;
+
+  /* Neutral scale (warm gray) */
+  --cf-neutral-0:  #FFFFFF;
+  --cf-neutral-50: #F5F5F2;
+  --cf-neutral-100: #EDEDE8;
+  --cf-neutral-200: #E0E0DC;
+  --cf-neutral-300: #D0D0CC;
+  --cf-neutral-400: #B0B0AC;
+  --cf-neutral-500: #8A8A86;
+  --cf-neutral-600: #6B6B6B;
+  --cf-neutral-700: #4A4A4A;
+  --cf-neutral-800: #2A2A2A;
+  --cf-neutral-850: #1F1F1F;
+  --cf-neutral-900: #1A1A1A;
+  --cf-neutral-950: #111111;
+
+  /* Dark surface scale (for dark sections) */
+  --cf-dark-surface: #1A1A1A;
+  --cf-dark-surface-2: #2A2A2A;
+  --cf-dark-surface-3: #333333;
+  --cf-dark-border: #3A3A3A;
+  --cf-dark-ink: #F0F0EC;
+  --cf-dark-ink-2: #A0A09C;
+  --cf-dark-ink-3: #70706C;
+}
+
+/* ---- Light Mode Semantic Tokens ---- */
+:root {
+  --cf-background: var(--cf-neutral-50);
+  --cf-foreground: var(--cf-neutral-900);
+  --cf-card: var(--cf-neutral-0);
+  --cf-card-foreground: var(--cf-neutral-900);
+  --cf-popover: var(--cf-neutral-0);
+  --cf-popover-foreground: var(--cf-neutral-900);
+  --cf-primary: var(--cf-brand-700);
+  --cf-primary-foreground: var(--cf-neutral-0);
+  --cf-muted: var(--cf-neutral-100);
+  --cf-muted-foreground: var(--cf-neutral-600);
+  --cf-border: var(--cf-neutral-200);
+  --cf-input: var(--cf-neutral-200);
+  --cf-ring: var(--cf-brand-700);
+
+  /* Extended semantic aliases */
+  --cf-surface: var(--cf-neutral-0);
+  --cf-surface-2: var(--cf-neutral-100);
+  --cf-ink: var(--cf-neutral-900);
+  --cf-ink-2: var(--cf-neutral-600);
+  --cf-ink-3: var(--cf-neutral-400);
+  --cf-line: var(--cf-neutral-200);
+  --cf-brand: var(--cf-brand-700);
+  --cf-brand-ink: var(--cf-neutral-0);
+  --cf-brand-tint: var(--cf-brand-50);
+
+  /* Dark section tokens (for inverted sections) */
+  --cf-dark-bg: var(--cf-neutral-900);
+  --cf-dark-card: var(--cf-dark-surface-2);
+  --cf-dark-card-fg: var(--cf-dark-ink);
+  --cf-dark-border-c: var(--cf-dark-border);
+  --cf-dark-muted: var(--cf-dark-ink-2);
+
+  /* Radius scale (restrained) */
+  --cf-radius-small: 4px;
+  --cf-radius-medium: 8px;
+  --cf-radius-large: 16px;
+  --cf-radius-full: 9999px;
+
+  --cf-radius-xs: 2px;
+  --cf-radius-sm: 4px;
+  --cf-radius-md: 8px;
+  --cf-radius-lg: 16px;
+  --cf-radius-pill: 9999px;
+
+  /* Shadow scale */
+  --cf-shadow-1: 0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03);
+  --cf-shadow-2: 0 8px 24px -8px rgba(15,23,42,0.12);
+  --cf-shadow-3: 0 24px 60px -20px rgba(15,23,42,0.25);
+
+  /* State colors (semantic only) */
+  --state-success: #2D7A4E;
+  --state-warning: #B8860B;
+  --state-error: #C0392B;
+  --state-info: #143D66;
+}
+
+/* ---- Dark Mode Semantic Tokens ---- */
+html.dark {
+  --cf-background: #111111;
+  --cf-foreground: #F0F0EC;
+  --cf-card: #1F1F1F;
+  --cf-card-foreground: #F0F0EC;
+  --cf-popover: #1F1F1F;
+  --cf-popover-foreground: #F0F0EC;
+  --cf-primary: var(--cf-brand-300);
+  --cf-primary-foreground: var(--cf-neutral-900);
+  --cf-muted: #2A2A2A;
+  --cf-muted-foreground: #A0A09C;
+  --cf-border: #3A3A3A;
+  --cf-input: #3A3A3A;
+  --cf-ring: var(--cf-brand-300);
+
+  --cf-surface: #1F1F1F;
+  --cf-surface-2: #2A2A2A;
+  --cf-ink: #F0F0EC;
+  --cf-ink-2: #A0A09C;
+  --cf-ink-3: #70706C;
+  --cf-line: #3A3A3A;
+  --cf-brand: var(--cf-brand-300);
+  --cf-brand-ink: var(--cf-neutral-900);
+  --cf-brand-tint: #1F2F25;
+}
+
+/* ---- Typography System ---- */
+:root {
+  /* Latin-first stack for English, with CJK fallback */
+  --cf-font-sans: "Inter", "Helvetica Neue", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  /* CJK-first stack for Chinese text */
+  --cf-font-cjk: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Inter", system-ui, -apple-system, sans-serif;
+  /* Monospace */
+  --cf-font-mono: "JetBrains Mono", "SF Mono", "Cascadia Code", "Consolas", monospace;
+
+  /* Type scale */
+  --cf-text-display: clamp(40px, 6vw, 72px);
+  --cf-text-h1: clamp(28px, 3.5vw, 48px);
+  --cf-text-h2: clamp(22px, 2.4vw, 32px);
+  --cf-text-h3: 20px;
+  --cf-text-body-l: 18px;
+  --cf-text-body: 15px;
+  --cf-text-caption: 13px;
+  --cf-text-mono: 13px;
+
+  /* Line heights */
+  --cf-lh-display: 1.05;
+  --cf-lh-heading: 1.2;
+  --cf-lh-body: 1.6;
+  --cf-lh-tight: 1.3;
+
+  /* Font weights */
+  --cf-fw-regular: 400;
+  --cf-fw-medium: 500;
+  --cf-fw-semibold: 600;
+  --cf-fw-bold: 700;
+
+  /* Letter spacing */
+  --cf-tracking-display: -0.03em;
+  --cf-tracking-heading: -0.02em;
+  --cf-tracking-body: 0;
+  --cf-tracking-caption: 0.01em;
+
+  /* Spacing (8pt grid) */
+  --cf-s-1: 4px;
+  --cf-s-2: 8px;
+  --cf-s-3: 12px;
+  --cf-s-4: 16px;
+  --cf-s-5: 24px;
+  --cf-s-6: 32px;
+  --cf-s-7: 48px;
+  --cf-s-8: 80px;
+  --cf-s-9: 120px;
+}
+
+/* ---- Base Reset & Typography Classes ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--cf-font-sans);
+  font-size: var(--cf-text-body);
+  line-height: var(--cf-lh-body);
+  color: var(--cf-foreground);
+  background-color: var(--cf-background);
+  font-weight: var(--cf-fw-regular);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Typography utility classes */
+.cf-display {
+  font-size: var(--cf-text-display);
+  line-height: var(--cf-lh-display);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-display);
+  text-wrap: balance;
+}
+
+.cf-h1 {
+  font-size: var(--cf-text-h1);
+  line-height: var(--cf-lh-heading);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+  text-wrap: balance;
+}
+
+.cf-h2 {
+  font-size: var(--cf-text-h2);
+  line-height: var(--cf-lh-heading);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+  text-wrap: balance;
+}
+
+.cf-h3 {
+  font-size: var(--cf-text-h3);
+  line-height: var(--cf-lh-tight);
+  font-weight: var(--cf-fw-semibold);
+  letter-spacing: var(--cf-tracking-heading);
+}
+
+.cf-body-l {
+  font-size: var(--cf-text-body-l);
+  line-height: var(--cf-lh-body);
+  font-weight: var(--cf-fw-regular);
+}
+
+.cf-body {
+  font-size: var(--cf-text-body);
+  line-height: var(--cf-lh-body);
+  font-weight: var(--cf-fw-regular);
+}
+
+.cf-caption {
+  font-size: var(--cf-text-caption);
+  line-height: 1.5;
+  font-weight: var(--cf-fw-regular);
+  letter-spacing: var(--cf-tracking-caption);
+}
+
+.cf-mono {
+  font-family: var(--cf-font-mono);
+  font-size: var(--cf-text-mono);
+  font-weight: var(--cf-fw-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tabular nums for data */
+.cf-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Component Utility Classes ---- */
+
+/* Buttons */
+.cf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cf-s-2);
+  padding: 12px 24px;
+  font-size: var(--cf-text-body);
+  font-weight: var(--cf-fw-semibold);
+  line-height: 1;
+  border-radius: var(--cf-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cf-btn-primary {
+  background-color: var(--cf-primary);
+  color: var(--cf-primary-foreground);
+}
+
+.cf-btn-primary:hover {
+  background-color: var(--cf-brand-800);
+  transform: translateY(-1px);
+}
+
+.cf-btn-primary:active {
+  transform: translateY(0);
+}
+
+.cf-btn-secondary {
+  background-color: transparent;
+  color: var(--cf-foreground);
+  border: 1px solid var(--cf-border);
+}
+
+.cf-btn-secondary:hover {
+  background-color: var(--cf-muted);
+  border-color: var(--cf-neutral-400);
+}
+
+.cf-btn-ghost {
+  background-color: transparent;
+  color: var(--cf-primary);
+  padding: 12px 0;
+}
+
+.cf-btn-ghost:hover {
+  color: var(--cf-brand-800);
+}
+
+/* Cards */
+.cf-card {
+  background-color: var(--cf-card);
+  border-radius: var(--cf-radius-lg);
+  border: 1px solid var(--cf-border);
+  overflow: hidden;
+  transition: all 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Tags */
+.cf-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: var(--cf-fw-medium);
+  border-radius: var(--cf-radius-md);
+  background-color: var(--cf-muted);
+  color: var(--cf-muted-foreground);
+}
+
+.cf-tag-brand {
+  background-color: var(--cf-brand-50);
+  color: var(--cf-brand-700);
+}
+
+/* Container */
+.cf-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Section spacing */
+.cf-section {
+  padding: 80px 0;
+}
+
+/* Divider */
+.cf-divider {
+  height: 1px;
+  background-color: var(--cf-line);
+  border: none;
+}
+
+/* Focus visible */
+*:focus-visible {
+  outline: 2px solid var(--cf-ring);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
+    <style type="text/tailwindcss">
+  @theme inline {
+    --color-background: var(--cf-background);
+    --color-foreground: var(--cf-foreground);
+    --color-card: var(--cf-card);
+    --color-card-foreground: var(--cf-card-foreground);
+    --color-popover: var(--cf-popover);
+    --color-popover-foreground: var(--cf-popover-foreground);
+    --color-primary: var(--cf-primary);
+    --color-primary-foreground: var(--cf-primary-foreground);
+    --color-muted: var(--cf-muted);
+    --color-muted-foreground: var(--cf-muted-foreground);
+    --color-border: var(--cf-border);
+    --color-input: var(--cf-input);
+    --color-ring: var(--cf-ring);
+    --radius-sm: var(--cf-radius-sm);
+    --radius-md: var(--cf-radius-md);
+    --radius-lg: var(--cf-radius-lg);
+  }
+  @layer base {
+    body { background: var(--cf-background); color: var(--cf-foreground); }
+    td, th { @apply break-words; word-break: break-all; word-break: auto-phrase; }
+    th { @apply whitespace-nowrap; }
+  }
+    </style>
+    <style id="semantic-token-fallback">
+      .bg-background { background-color: var(--cf-background); }
+      .text-background { color: var(--cf-background); }
+      .border-background { border-color: var(--cf-background); }
+      .ring-background { --tw-ring-color: var(--cf-background); }
+      .bg-foreground { background-color: var(--cf-foreground); }
+      .text-foreground { color: var(--cf-foreground); }
+      .border-foreground { border-color: var(--cf-foreground); }
+      .ring-foreground { --tw-ring-color: var(--cf-foreground); }
+      .bg-card { background-color: var(--cf-card); }
+      .text-card { color: var(--cf-card); }
+      .border-card { border-color: var(--cf-card); }
+      .ring-card { --tw-ring-color: var(--cf-card); }
+      .bg-card-foreground { background-color: var(--cf-card-foreground); }
+      .text-card-foreground { color: var(--cf-card-foreground); }
+      .border-card-foreground { border-color: var(--cf-card-foreground); }
+      .ring-card-foreground { --tw-ring-color: var(--cf-card-foreground); }
+      .bg-popover { background-color: var(--cf-popover); }
+      .text-popover { color: var(--cf-popover); }
+      .border-popover { border-color: var(--cf-popover); }
+      .ring-popover { --tw-ring-color: var(--cf-popover); }
+      .bg-popover-foreground { background-color: var(--cf-popover-foreground); }
+      .text-popover-foreground { color: var(--cf-popover-foreground); }
+      .border-popover-foreground { border-color: var(--cf-popover-foreground); }
+      .ring-popover-foreground { --tw-ring-color: var(--cf-popover-foreground); }
+      .bg-primary { background-color: var(--cf-primary); }
+      .text-primary { color: var(--cf-primary); }
+      .border-primary { border-color: var(--cf-primary); }
+      .ring-primary { --tw-ring-color: var(--cf-primary); }
+      .bg-primary-foreground { background-color: var(--cf-primary-foreground); }
+      .text-primary-foreground { color: var(--cf-primary-foreground); }
+      .border-primary-foreground { border-color: var(--cf-primary-foreground); }
+      .ring-primary-foreground { --tw-ring-color: var(--cf-primary-foreground); }
+      .bg-muted { background-color: var(--cf-muted); }
+      .text-muted { color: var(--cf-muted); }
+      .border-muted { border-color: var(--cf-muted); }
+      .ring-muted { --tw-ring-color: var(--cf-muted); }
+      .bg-muted-foreground { background-color: var(--cf-muted-foreground); }
+      .text-muted-foreground { color: var(--cf-muted-foreground); }
+      .border-muted-foreground { border-color: var(--cf-muted-foreground); }
+      .ring-muted-foreground { --tw-ring-color: var(--cf-muted-foreground); }
+      .bg-border { background-color: var(--cf-border); }
+      .text-border { color: var(--cf-border); }
+      .border-border { border-color: var(--cf-border); }
+      .ring-border { --tw-ring-color: var(--cf-border); }
+      .bg-input { background-color: var(--cf-input); }
+      .text-input { color: var(--cf-input); }
+      .border-input { border-color: var(--cf-input); }
+      .ring-input { --tw-ring-color: var(--cf-input); }
+      .bg-ring { background-color: var(--cf-ring); }
+      .text-ring { color: var(--cf-ring); }
+      .border-ring { border-color: var(--cf-ring); }
+      .ring-ring { --tw-ring-color: var(--cf-ring); }
+    </style>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      [data-icon] {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        background-color: currentColor;
+      }
+    </style>
+</head>
+<body class="min-h-screen font-sans antialiased">
+    <main>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

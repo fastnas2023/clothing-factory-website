@@ -1,0 +1,131 @@
+{
+  "success": true,
+  "outcome": "passed",
+  "repairable": true,
+  "terminalViolations": [],
+  "terminalBlockingSummary": null,
+  "skillProvenance": {
+    "name": "solo-design",
+    "version": "2026.07.22.00.00.00",
+    "version_source": "skill-release-manifest.json",
+    "runtime_skill_dir": null,
+    "recorded_at": null,
+    "expected_version": "2026.07.22.00.00.00",
+    "status": "matched",
+    "read_status": "loaded"
+  },
+  "operatingMode": "free-explore",
+  "renderBlockingErrorCount": 0,
+  "softWarningCount": 3,
+  "renderBlockingErrors": [],
+  "errorSignatures": [],
+  "softWarnings": [
+    "[repair-ledger] validationRepairLedger[0].repairActions[0].preEditFileHashes[] is missing (legacy optional evidence)",
+    "[repair-ledger] validationRepairLedger[0].repairActions[0].postEditFileHashes[] is missing (legacy optional evidence)",
+    "[html-quality] services.html: hardcoded colors are forbidden outside <style id=\"theme-vars\">. Use brand CSS variables from the token reference."
+  ],
+  "repairPlanHints": [
+    {
+      "errorClass": "hardcoded-color-in-body",
+      "owner": "sub-agent",
+      "repairScope": "targeted-token-replace",
+      "strategy": "targeted_token_replace_once",
+      "affectedFiles": [
+        "services.html"
+      ],
+      "repairReportPath": null,
+      "repairAlreadyAttempted": false,
+      "allowSourceRead": "no-full-html-read",
+      "maxValidationRuns": 2
+    }
+  ],
+  "repairActionTable": [],
+  "errorCount": 0,
+  "warningCount": 3,
+  "errors": [],
+  "warnings": [
+    "[repair-ledger] validationRepairLedger[0].repairActions[0].preEditFileHashes[] is missing (legacy optional evidence)",
+    "[repair-ledger] validationRepairLedger[0].repairActions[0].postEditFileHashes[] is missing (legacy optional evidence)",
+    "[html-quality] services.html: hardcoded colors are forbidden outside <style id=\"theme-vars\">. Use brand CSS variables from the token reference."
+  ],
+  "validationRunDisciplineStatus": {
+    "declared": true,
+    "restoreMode": false,
+    "maxFullValidationRuns": null,
+    "validationHistoryCount": 2,
+    "repairLedgerCount": 1,
+    "softWarningsTriggerRepair": null,
+    "terminalState": null,
+    "nextAction": null,
+    "violations": [],
+    "success": true
+  },
+  "terminalState": null,
+  "nextCheck": {
+    "type": "finish-readiness",
+    "command": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --check=all",
+    "fullValidationAllowed": false,
+    "reason": "workspace validation passed; run complete finish readiness before final delivery"
+  },
+  "repairBatch": [],
+  "repairContextPacket": {
+    "schema_version": "1.0",
+    "purpose": "small-context repair packet; read this before full validation-report.json",
+    "success": true,
+    "terminalState": null,
+    "skillProvenance": {
+      "name": "solo-design",
+      "version": "2026.07.22.00.00.00",
+      "version_source": "skill-release-manifest.json",
+      "runtime_skill_dir": null,
+      "recorded_at": null,
+      "expected_version": "2026.07.22.00.00.00",
+      "status": "matched",
+      "read_status": "loaded"
+    },
+    "renderBlockingErrorCount": 0,
+    "softWarningCount": 3,
+    "renderBlockingErrors": [],
+    "repairActionTable": [],
+    "nextCheck": {
+      "type": "finish-readiness",
+      "command": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --check=all",
+      "fullValidationAllowed": false,
+      "reason": "workspace validation passed; run complete finish readiness before final delivery"
+    },
+    "forbidden": [
+      "do not read validator source",
+      "do not rerun full validation when nextCheck.fullValidationAllowed=false",
+      "do not start preview/browser unless user explicitly asks",
+      "do not hand-edit repair ledger fields"
+    ]
+  },
+  "projectFileHashes": {
+    "clothing-factory-website.design": "612e9b266afe0d04569e4a8d1ac06caf6e3ce033777971fa421985d7c2788a37",
+    "colors_and_type.css": "b010fe1c74c85fde93af4acef6f45466aac3e6ced69dbcd95701eb9ba350ad46",
+    "runtime-orchestration-summary.json": "6fd5b5af703b34eca50c19b28fd7afa2e3836d1fddab29131a4ff3c5262f4eb5",
+    "pages/contact.html": "7cff4d4f76b4731d1dcb5a4108c4f8680bf906fd08dbfcf055861da7ff65d444",
+    "pages/factory.html": "0230f66f0783809dbd18e86d781d749e0ad0caafec0aca3935607985af3e2dc7",
+    "pages/home.html": "153327e73028520abcd724b4d700671922fff713d1d4a61756447c4037cdde70",
+    "pages/products.html": "27f04ce18ee1b0e4fca13d17da03b9753aa2a6e206d44869122f67cc30f8e7cb",
+    "pages/services.html": "d175f97e742de2e115dda96f2f346d6979960be9fd1fde01f5a66c4dd42b658b",
+    "assets/cat-kids.jpg": "2f068c54a714e4f3c00a3a86768b35df03d35396bdc69cf1d7ee4de11264560e",
+    "assets/cat-sportswear.jpg": "89e246c9b2663983008045d3dfa2b14ef07bd7f451506259334822737f81298a",
+    "assets/hero-factory.jpg": "90b934c04e67273cbddd0f44cd209a953eab8c442124ecb6860e77d1e3eb1f1d",
+    "assets/hero-workwear-factory.jpg": "9bcdaa91415bd1ea068e8948fbf58a61d3746e52cd64d19ac7e0299ce055ae3b",
+    "assets/product-dress.jpg": "a650eea6991f23b8874252564997922597a571ea60486e6dd60ee4dfb7774021",
+    "assets/product-hoodie.jpg": "cf4ef883c698718145e3cbb4de96d397a9997348f64e5664ee5946f3dea1178b",
+    "assets/product-jacket.jpg": "82ce992dd9cacad7abe9894ea12da7b48294a1c132f8a0005d49f9ec820a81ca",
+    "assets/product-pants.jpg": "c0787cd29f720efdf1747eda4ea07a12d3f390cdacb1ebb624fa88e0992e529d",
+    "assets/product-polo.jpg": "629ec868095d204bd1e99472d35149b49250773f4d8db2ce751b8c0789c79fc2",
+    "assets/product-tee.jpg": "ef3bb5125b4be0950644cbed68b8495de7ffaa8608e300a7a2385168158141af",
+    "assets/workshop-cutting.jpg": "659aba79b3e518a4fed1609bda0a6249e0a95755b44e5a717b9433ae3578d54d",
+    "assets/workshop-ironing.jpg": "9e1f0223b0e5f9e29886d8167d7e800ad9b366a279d56a389e0f54167185b6f2",
+    "assets/workshop-sewing.jpg": "bb72cd94172d0c029968952b8bc305bb4a244d9d29116cea8de60ebe20d1cde6",
+    "assets/workshop-warehouse.jpg": "0a9db8fd384f218c7f844651057f2e584d14d70b1001a1628212d8170f08f2c3"
+  },
+  "designDir": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website",
+  "expectedPages": 5,
+  "requireInteractions": "nav-home:home.html,nav-products:products.html,nav-factory:factory.html,nav-services:services.html,nav-contact:contact.html,cta-quote:contact.html,cta-inquire:home.html,cta-contact:home.html,cta-submit-requirements:services.html,cta-submit-quote:contact.html",
+  "checkedAt": "2026-08-04T10:49:04.676Z"
+}

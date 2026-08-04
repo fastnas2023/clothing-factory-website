@@ -1,0 +1,1323 @@
+{
+  "schemaVersion": "1.0",
+  "skillProvenance": {
+    "name": "solo-design",
+    "version": "2026.07.22.00.00.00",
+    "version_source": "skill-release-manifest.json",
+    "schema_version": "1.0",
+    "release": "prompt-base-cloud-ssot-migration",
+    "read_status": "loaded"
+  },
+  "project": {
+    "operation": "create",
+    "resolvedLane": "complex_html_page",
+    "intentProfile": {
+      "caseFamily": "free_exploration",
+      "sourceType": "text-prd",
+      "graphicStrategy": null,
+      "replicationMode": null
+    },
+    "selectedIntentWorkflowRead": true,
+    "contextRequirementsLoaded": [
+      {
+        "path": "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "delivery-quality/page-rendering-quality-gate.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "delivery-quality/design-artifact-validation.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "delivery-quality/delivery-evidence-contract.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "visual-experience/visual-experience-guidelines.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      },
+      {
+        "path": "visual-experience/visual-checkpoint-protocol.md",
+        "readStatus": "loaded",
+        "bodyRead": true,
+        "recordedAt": "2026-08-04T09:24:00Z"
+      }
+    ],
+    "contextReadScope": "complex-build-lane-only",
+    "readScopeLedger": [
+      {
+        "phase": "intake",
+        "files": [
+          "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "intent-workflows/intent-project-complex-build/start-complex-project-build.md",
+          "intent-workflows/intent-project-complex-build/00-requirement-and-style-intake.md",
+          "intent-workflows/intent-project-complex-build/orchestration-summary-fields.md",
+          "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        ],
+        "status": "loaded"
+      },
+      {
+        "phase": "format",
+        "files": [
+          "shared-runtime/design-artifact-formats/design-project-file-format.md",
+          "shared-runtime/orchestration-summary-contract/orchestration-summary-contract.md",
+          "shared-runtime/orchestration-summary-contract/generalized-flow-control-fields.md"
+        ],
+        "status": "loaded"
+      },
+      {
+        "phase": "quality",
+        "files": [
+          "delivery-quality/long-requirement-intake-rules.md",
+          "visual-experience/visual-experience-guidelines.md",
+          "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md"
+        ],
+        "status": "loaded"
+      },
+      {
+        "actor": "page-sub-agent",
+        "lane": "complex_html_page",
+        "path": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "reason": "page runtime guide",
+        "scopeClass": "page-runtime",
+        "declaredBeforeRead": true,
+        "recordedAt": "2026-08-04T09:33:42.522Z",
+        "nodeId": "page-home",
+        "htmlSrc": "pages/home.html"
+      },
+      {
+        "actor": "page-sub-agent",
+        "lane": "complex_html_page",
+        "path": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md",
+        "reason": "dispatch contract",
+        "scopeClass": "dispatch-contract",
+        "declaredBeforeRead": true,
+        "recordedAt": "2026-08-04T09:33:42.522Z",
+        "nodeId": "page-home",
+        "htmlSrc": "pages/home.html"
+      }
+    ],
+    "deviceType": "desktop",
+    "designRead": "B2B clothing manufacturer website / brand clients + cross-border e-commerce + overseas buyers / professional industrial trustworthy / visual-heavy with large whitespace / avoid e-commerce cheapness",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 3,
+      "visualDensity": 3
+    },
+    "styleDefinitionBrief": "High-end B2B clothing factory website, deep ocean blue (#143D66) + warm cream (#F5F5F2) + charcoal surfaces, Inter + Noto Sans SC, industrial manufacturing photography, editorial whitespace, European/American manufacturing enterprise feel.",
+    "styleContinuityAnchors": {
+      "colorSystem": "single brand hue deep ocean blue #143D66 with tints; warm cream #F5F5F2 background; charcoal #1A1A1A dark sections; neutral warm gray scale",
+      "typographySystem": "Inter + Noto Sans SC + PingFang SC sans-serif; Display/H1/H2/H3/Body-L/Body/Caption scale; tabular-nums for data",
+      "radiusScale": "2px/4px/8px/16px/999px; cards 16px; buttons 8px; tags pill",
+      "surfaceDepthModel": "border-first for static cards; shadow alpha <= 0.05 for static; deeper shadows only for floating layers",
+      "iconPolicy": "Lucide icons, 1.5px stroke, 16/20/24px sizes; no emoji as UI icons"
+    },
+    "shapeSystem": {
+      "radiusMax": 16,
+      "cardRadius": "var(--cf-radius-lg)",
+      "buttonRadius": "var(--cf-radius-md)",
+      "tagRadius": "var(--cf-radius-pill)"
+    },
+    "sharedProjectShellContract": {
+      "radiusScale": {
+        "sm": 4,
+        "md": 8,
+        "lg": 16,
+        "pill": 9999
+      },
+      "surfaceDepthModel": "border-first static; shadow-2/3 for floating only",
+      "typographySystem": "Inter + Noto Sans SC",
+      "navigationShell": "desktop-top-nav: 72px height, full-width, logo left, 7 nav links center-left, primary CTA right"
+    },
+    "generationTree": {
+      "root": {
+        "type": "project-shell",
+        "id": "shell",
+        "children": [
+          {
+            "type": "leaf-page",
+            "id": "page-home",
+            "htmlSrc": "pages/home.html",
+            "title": "首页",
+            "pageIndex": 1
+          },
+          {
+            "type": "leaf-page",
+            "id": "page-products",
+            "htmlSrc": "pages/products.html",
+            "title": "产品中心",
+            "pageIndex": 2
+          },
+          {
+            "type": "leaf-page",
+            "id": "page-factory",
+            "htmlSrc": "pages/factory.html",
+            "title": "工厂实力",
+            "pageIndex": 3
+          },
+          {
+            "type": "leaf-page",
+            "id": "page-services",
+            "htmlSrc": "pages/services.html",
+            "title": "定制服务",
+            "pageIndex": 4
+          },
+          {
+            "type": "leaf-page",
+            "id": "page-contact",
+            "htmlSrc": "pages/contact.html",
+            "title": "联系询价",
+            "pageIndex": 5
+          }
+        ]
+      }
+    },
+    "cssPreflightEvidence": {
+      "command": "node apply-html-head-contract.mjs colors_and_type.css .preflight/preflight.html --title=Preflight --lang=zh --prefix=cf",
+      "exitCode": 0,
+      "generatedThemeInline": true,
+      "generatedSemanticFallback": true,
+      "recordedAt": "2026-08-04T09:26:00Z"
+    },
+    "mobileNavigation": {
+      "applies": false
+    },
+    "validationRunDiscipline": "main-agent-only",
+    "validationHistory": [
+      {
+        "reportPath": "validation-report.json",
+        "reportHash": "32bced83bfbd32a17ca72391c5f90dff15c8c86a960a14372100caefe19acc1a",
+        "checkedAt": "2026-08-04T09:55:33.882Z",
+        "success": false,
+        "exitCode": 1,
+        "renderBlockingErrorCount": 1,
+        "repairPlanHints": [
+          "hardcoded-color-in-body"
+        ],
+        "errorSignatures": [
+          {
+            "errorClass": "dispatch-preflight-or-ownership",
+            "normalized": "[dispatch-changed-files] project.expectedDispatches[] is required when dispatchPreflightManifest[] exists",
+            "signature": "1863095a5236c379a633d22a8424261bfcde770ff9ab246147a2326cba87f6fd"
+          }
+        ],
+        "terminalState": null
+      },
+      {
+        "reportPath": "validation-report.json",
+        "reportHash": "f2a88294592127b1891cbeff0085216f884c61be01f1c29e85e8ff1c045e1acb",
+        "checkedAt": "2026-08-04T10:00:05.495Z",
+        "success": true,
+        "exitCode": 0,
+        "renderBlockingErrorCount": 0,
+        "repairPlanHints": [
+          "hardcoded-color-in-body"
+        ],
+        "errorSignatures": [],
+        "terminalState": null
+      }
+    ],
+    "validationRepairLedger": [
+      {
+        "failedReportPath": "validation-report.json",
+        "failedReportHash": "32bced83bfbd32a17ca72391c5f90dff15c8c86a960a14372100caefe19acc1a",
+        "repairWorkflowReadPath": "intent-workflows/intent-project-mutation/main-agent-repair-workflow.md",
+        "repairStartedAt": "2026-08-04T09:56:08.112Z",
+        "repairEntryStatus": "revalidated-success",
+        "ownerTriage": [
+          {
+            "owner": "sub-agent",
+            "errorClass": "hardcoded-color-in-body",
+            "affectedFiles": [
+              "services.html"
+            ],
+            "repairScope": "targeted-token-replace",
+            "strategy": "targeted_token_replace_once"
+          }
+        ],
+        "repairPlanHints": [
+          {
+            "errorClass": "hardcoded-color-in-body",
+            "owner": "sub-agent",
+            "repairScope": "targeted-token-replace",
+            "strategy": "targeted_token_replace_once",
+            "affectedFiles": [
+              "services.html"
+            ],
+            "repairReportPath": null,
+            "repairAlreadyAttempted": false,
+            "allowSourceRead": "no-full-html-read",
+            "maxValidationRuns": 2
+          }
+        ],
+        "repairActions": [
+          {
+            "owner": "main-agent",
+            "errorClass": "dispatch-preflight-or-ownership",
+            "affectedFiles": [
+              "runtime-orchestration-summary.json"
+            ],
+            "action": "record_dispatch_completion_for_all_pages",
+            "observedFileHashes": [
+              {
+                "path": "runtime-orchestration-summary.json",
+                "hash": "b6f9e93b3279551cc77b8737887aa1ed015d8bbb191967c1a71f717b10885d61"
+              }
+            ],
+            "preEditFileHashes": [],
+            "postEditFileHashes": [],
+            "repairOwnedFields": [
+              "dispatch-preflight-or-ownership"
+            ],
+            "recordedAt": "2026-08-04T09:59:00.628Z",
+            "repairActionTableRequired": true
+          }
+        ],
+        "revalidationReportPath": "validation-report.json",
+        "revalidationReportHash": "f2a88294592127b1891cbeff0085216f884c61be01f1c29e85e8ff1c045e1acb",
+        "revalidationSuccess": true,
+        "blockedReason": null,
+        "revalidationRecordedAt": "2026-08-04T10:00:15.631Z"
+      }
+    ],
+    "dispatchPreflightManifest": [
+      {
+        "recorded_at": "2026-08-04T09:33:42.522Z",
+        "generatedBy": "build-page-dispatch-manifest.mjs",
+        "packetType": "ComplexPagePacket",
+        "laneContract": {
+          "resolvedLane": "complex_html_page",
+          "packetType": "ComplexPagePacket",
+          "pageRuntimeGuide": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "dispatchContract": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        },
+        "taskLinePresent": true,
+        "outputPathPresent": true,
+        "sharedTemplate": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "nodeId": "page-home",
+        "htmlSrc": "pages/home.html",
+        "supplementaryReads": [],
+        "allowedWritePaths": [
+          "pages/home.html",
+          "assets/"
+        ],
+        "forbiddenWriteRoots": [
+          "*.design",
+          "runtime-orchestration-summary.json",
+          "validation-report.json",
+          "finish-readiness-report.json",
+          "restore-contract-report.json",
+          "page-generation-summary.json"
+        ],
+        "toolPolicy": {
+          "todoWriteAllowed": false,
+          "validationScriptsAllowed": false,
+          "previewAllowed": false,
+          "helperScriptsAllowed": false,
+          "designFileWriteAllowed": false,
+          "allowedWritePaths": [
+            "pages/home.html",
+            "assets/"
+          ]
+        },
+        "skillRuntime": {
+          "skillDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design",
+          "deterministicToolDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling",
+          "toolPaths": {
+            "applyHtmlHeadContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs",
+            "recordDispatchCompletion": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs",
+            "buildPageDispatchManifest": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\build-page-dispatch-manifest.mjs",
+            "validateDesignWorkspace": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-design-workspace.mjs",
+            "validateFinishReadiness": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs",
+            "validateRestoreContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-restore-contract.mjs"
+          },
+          "requiredForPageSubAgent": [
+            "applyHtmlHeadContract",
+            "recordDispatchCompletion"
+          ],
+          "pathInjection": "absolute",
+          "pathContract": "Do not use {SKILL_DIR} placeholders inside Page Sub-Agent packets; use toolPaths.* absolute paths.",
+          "commandTemplates": {
+            "recordDispatchCompletion": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --node-id=\"page-home\" --html-src=\"pages/home.html\" --status=completed --changed-files=<comma-separated-project-relative-files> --trace-digest=<main-agent-runtime-trace-digest> --tool-ledger-json=<tool-ledger-json-or-file>"
+          }
+        },
+        "cssFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css",
+        "htmlFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\home.html",
+        "brandPrefix": "cf",
+        "aestheticsMode": "free-explore",
+        "toolDisciplineBlockPresent": true,
+        "fillHtmlHeadCommand": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\home.html\" --title=\"首页\" --lang=\"zh-CN\" --prefix=\"cf\"",
+        "headFillMode": "skeleton-first",
+        "viewportMode": null,
+        "completionSchemaExpected": "full",
+        "restoreFields": null,
+        "restoreContractStatus": null,
+        "restoreCompactPacket": null,
+        "deterministicCommands": null,
+        "sourceAuthorityLock": null,
+        "preDispatchFileHashes": {
+          "clothing-factory-website.design": "c03f11d1d4564963429a5cafb7ffee20e8045b3a4d54d5e2f3de361547231c59"
+        },
+        "contextPreflight": {
+          "workflowPath": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "requiredContextFiles": [
+            "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+            "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+            "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+            "delivery-quality/page-rendering-quality-gate.md",
+            "delivery-quality/design-artifact-validation.md",
+            "delivery-quality/delivery-evidence-contract.md",
+            "visual-experience/visual-experience-guidelines.md",
+            "visual-experience/visual-checkpoint-protocol.md"
+          ],
+          "optionalContextFiles": [],
+          "passed": true
+        },
+        "pageSliceOnly": true,
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "fillHtmlHeadCommandValid": true,
+        "mobileNavigation": {
+          "required": false,
+          "appliesToThisPage": false,
+          "canonicalHtmlIncluded": false,
+          "missingFields": []
+        },
+        "persistedToSummary": true,
+        "taskQueryAudited": false,
+        "proofSource": "summary-only",
+        "largeWorkflowFilesInTaskQuery": null
+      },
+      {
+        "recorded_at": "2026-08-04T09:33:42.522Z",
+        "generatedBy": "build-page-dispatch-manifest.mjs",
+        "packetType": "ComplexPagePacket",
+        "laneContract": {
+          "resolvedLane": "complex_html_page",
+          "packetType": "ComplexPagePacket",
+          "pageRuntimeGuide": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "dispatchContract": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        },
+        "taskLinePresent": true,
+        "outputPathPresent": true,
+        "sharedTemplate": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "nodeId": "page-products",
+        "htmlSrc": "pages/products.html",
+        "supplementaryReads": [],
+        "allowedWritePaths": [
+          "pages/products.html",
+          "assets/"
+        ],
+        "forbiddenWriteRoots": [
+          "*.design",
+          "runtime-orchestration-summary.json",
+          "validation-report.json",
+          "finish-readiness-report.json",
+          "restore-contract-report.json",
+          "page-generation-summary.json"
+        ],
+        "toolPolicy": {
+          "todoWriteAllowed": false,
+          "validationScriptsAllowed": false,
+          "previewAllowed": false,
+          "helperScriptsAllowed": false,
+          "designFileWriteAllowed": false,
+          "allowedWritePaths": [
+            "pages/products.html",
+            "assets/"
+          ]
+        },
+        "skillRuntime": {
+          "skillDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design",
+          "deterministicToolDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling",
+          "toolPaths": {
+            "applyHtmlHeadContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs",
+            "recordDispatchCompletion": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs",
+            "buildPageDispatchManifest": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\build-page-dispatch-manifest.mjs",
+            "validateDesignWorkspace": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-design-workspace.mjs",
+            "validateFinishReadiness": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs",
+            "validateRestoreContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-restore-contract.mjs"
+          },
+          "requiredForPageSubAgent": [
+            "applyHtmlHeadContract",
+            "recordDispatchCompletion"
+          ],
+          "pathInjection": "absolute",
+          "pathContract": "Do not use {SKILL_DIR} placeholders inside Page Sub-Agent packets; use toolPaths.* absolute paths.",
+          "commandTemplates": {
+            "recordDispatchCompletion": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --node-id=\"page-products\" --html-src=\"pages/products.html\" --status=completed --changed-files=<comma-separated-project-relative-files> --trace-digest=<main-agent-runtime-trace-digest> --tool-ledger-json=<tool-ledger-json-or-file>"
+          }
+        },
+        "cssFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css",
+        "htmlFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\products.html",
+        "brandPrefix": "cf",
+        "aestheticsMode": "free-explore",
+        "toolDisciplineBlockPresent": true,
+        "fillHtmlHeadCommand": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\products.html\" --title=\"产品中心\" --lang=\"zh-CN\" --prefix=\"cf\"",
+        "headFillMode": "skeleton-first",
+        "viewportMode": null,
+        "completionSchemaExpected": "full",
+        "restoreFields": null,
+        "restoreContractStatus": null,
+        "restoreCompactPacket": null,
+        "deterministicCommands": null,
+        "sourceAuthorityLock": null,
+        "preDispatchFileHashes": {
+          "clothing-factory-website.design": "c03f11d1d4564963429a5cafb7ffee20e8045b3a4d54d5e2f3de361547231c59"
+        },
+        "contextPreflight": {
+          "workflowPath": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "requiredContextFiles": [
+            "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+            "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+            "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+            "delivery-quality/page-rendering-quality-gate.md",
+            "delivery-quality/design-artifact-validation.md",
+            "delivery-quality/delivery-evidence-contract.md",
+            "visual-experience/visual-experience-guidelines.md",
+            "visual-experience/visual-checkpoint-protocol.md"
+          ],
+          "optionalContextFiles": [],
+          "passed": true
+        },
+        "pageSliceOnly": true,
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "fillHtmlHeadCommandValid": true,
+        "mobileNavigation": {
+          "required": false,
+          "appliesToThisPage": false,
+          "canonicalHtmlIncluded": false,
+          "missingFields": []
+        },
+        "persistedToSummary": true,
+        "taskQueryAudited": false,
+        "proofSource": "summary-only",
+        "largeWorkflowFilesInTaskQuery": null
+      },
+      {
+        "recorded_at": "2026-08-04T09:33:42.522Z",
+        "generatedBy": "build-page-dispatch-manifest.mjs",
+        "packetType": "ComplexPagePacket",
+        "laneContract": {
+          "resolvedLane": "complex_html_page",
+          "packetType": "ComplexPagePacket",
+          "pageRuntimeGuide": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "dispatchContract": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        },
+        "taskLinePresent": true,
+        "outputPathPresent": true,
+        "sharedTemplate": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "nodeId": "page-factory",
+        "htmlSrc": "pages/factory.html",
+        "supplementaryReads": [],
+        "allowedWritePaths": [
+          "pages/factory.html",
+          "assets/"
+        ],
+        "forbiddenWriteRoots": [
+          "*.design",
+          "runtime-orchestration-summary.json",
+          "validation-report.json",
+          "finish-readiness-report.json",
+          "restore-contract-report.json",
+          "page-generation-summary.json"
+        ],
+        "toolPolicy": {
+          "todoWriteAllowed": false,
+          "validationScriptsAllowed": false,
+          "previewAllowed": false,
+          "helperScriptsAllowed": false,
+          "designFileWriteAllowed": false,
+          "allowedWritePaths": [
+            "pages/factory.html",
+            "assets/"
+          ]
+        },
+        "skillRuntime": {
+          "skillDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design",
+          "deterministicToolDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling",
+          "toolPaths": {
+            "applyHtmlHeadContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs",
+            "recordDispatchCompletion": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs",
+            "buildPageDispatchManifest": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\build-page-dispatch-manifest.mjs",
+            "validateDesignWorkspace": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-design-workspace.mjs",
+            "validateFinishReadiness": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs",
+            "validateRestoreContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-restore-contract.mjs"
+          },
+          "requiredForPageSubAgent": [
+            "applyHtmlHeadContract",
+            "recordDispatchCompletion"
+          ],
+          "pathInjection": "absolute",
+          "pathContract": "Do not use {SKILL_DIR} placeholders inside Page Sub-Agent packets; use toolPaths.* absolute paths.",
+          "commandTemplates": {
+            "recordDispatchCompletion": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --node-id=\"page-factory\" --html-src=\"pages/factory.html\" --status=completed --changed-files=<comma-separated-project-relative-files> --trace-digest=<main-agent-runtime-trace-digest> --tool-ledger-json=<tool-ledger-json-or-file>"
+          }
+        },
+        "cssFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css",
+        "htmlFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\factory.html",
+        "brandPrefix": "cf",
+        "aestheticsMode": "free-explore",
+        "toolDisciplineBlockPresent": true,
+        "fillHtmlHeadCommand": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\factory.html\" --title=\"工厂实力\" --lang=\"zh-CN\" --prefix=\"cf\"",
+        "headFillMode": "skeleton-first",
+        "viewportMode": null,
+        "completionSchemaExpected": "full",
+        "restoreFields": null,
+        "restoreContractStatus": null,
+        "restoreCompactPacket": null,
+        "deterministicCommands": null,
+        "sourceAuthorityLock": null,
+        "preDispatchFileHashes": {
+          "clothing-factory-website.design": "c03f11d1d4564963429a5cafb7ffee20e8045b3a4d54d5e2f3de361547231c59"
+        },
+        "contextPreflight": {
+          "workflowPath": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "requiredContextFiles": [
+            "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+            "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+            "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+            "delivery-quality/page-rendering-quality-gate.md",
+            "delivery-quality/design-artifact-validation.md",
+            "delivery-quality/delivery-evidence-contract.md",
+            "visual-experience/visual-experience-guidelines.md",
+            "visual-experience/visual-checkpoint-protocol.md"
+          ],
+          "optionalContextFiles": [],
+          "passed": true
+        },
+        "pageSliceOnly": true,
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "fillHtmlHeadCommandValid": true,
+        "mobileNavigation": {
+          "required": false,
+          "appliesToThisPage": false,
+          "canonicalHtmlIncluded": false,
+          "missingFields": []
+        },
+        "persistedToSummary": true,
+        "taskQueryAudited": false,
+        "proofSource": "summary-only",
+        "largeWorkflowFilesInTaskQuery": null
+      },
+      {
+        "recorded_at": "2026-08-04T09:33:42.522Z",
+        "generatedBy": "build-page-dispatch-manifest.mjs",
+        "packetType": "ComplexPagePacket",
+        "laneContract": {
+          "resolvedLane": "complex_html_page",
+          "packetType": "ComplexPagePacket",
+          "pageRuntimeGuide": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "dispatchContract": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        },
+        "taskLinePresent": true,
+        "outputPathPresent": true,
+        "sharedTemplate": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "nodeId": "page-services",
+        "htmlSrc": "pages/services.html",
+        "supplementaryReads": [],
+        "allowedWritePaths": [
+          "pages/services.html",
+          "assets/"
+        ],
+        "forbiddenWriteRoots": [
+          "*.design",
+          "runtime-orchestration-summary.json",
+          "validation-report.json",
+          "finish-readiness-report.json",
+          "restore-contract-report.json",
+          "page-generation-summary.json"
+        ],
+        "toolPolicy": {
+          "todoWriteAllowed": false,
+          "validationScriptsAllowed": false,
+          "previewAllowed": false,
+          "helperScriptsAllowed": false,
+          "designFileWriteAllowed": false,
+          "allowedWritePaths": [
+            "pages/services.html",
+            "assets/"
+          ]
+        },
+        "skillRuntime": {
+          "skillDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design",
+          "deterministicToolDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling",
+          "toolPaths": {
+            "applyHtmlHeadContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs",
+            "recordDispatchCompletion": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs",
+            "buildPageDispatchManifest": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\build-page-dispatch-manifest.mjs",
+            "validateDesignWorkspace": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-design-workspace.mjs",
+            "validateFinishReadiness": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs",
+            "validateRestoreContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-restore-contract.mjs"
+          },
+          "requiredForPageSubAgent": [
+            "applyHtmlHeadContract",
+            "recordDispatchCompletion"
+          ],
+          "pathInjection": "absolute",
+          "pathContract": "Do not use {SKILL_DIR} placeholders inside Page Sub-Agent packets; use toolPaths.* absolute paths.",
+          "commandTemplates": {
+            "recordDispatchCompletion": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --node-id=\"page-services\" --html-src=\"pages/services.html\" --status=completed --changed-files=<comma-separated-project-relative-files> --trace-digest=<main-agent-runtime-trace-digest> --tool-ledger-json=<tool-ledger-json-or-file>"
+          }
+        },
+        "cssFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css",
+        "htmlFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\services.html",
+        "brandPrefix": "cf",
+        "aestheticsMode": "free-explore",
+        "toolDisciplineBlockPresent": true,
+        "fillHtmlHeadCommand": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\services.html\" --title=\"定制服务\" --lang=\"zh-CN\" --prefix=\"cf\"",
+        "headFillMode": "skeleton-first",
+        "viewportMode": null,
+        "completionSchemaExpected": "full",
+        "restoreFields": null,
+        "restoreContractStatus": null,
+        "restoreCompactPacket": null,
+        "deterministicCommands": null,
+        "sourceAuthorityLock": null,
+        "preDispatchFileHashes": {
+          "clothing-factory-website.design": "c03f11d1d4564963429a5cafb7ffee20e8045b3a4d54d5e2f3de361547231c59"
+        },
+        "contextPreflight": {
+          "workflowPath": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "requiredContextFiles": [
+            "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+            "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+            "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+            "delivery-quality/page-rendering-quality-gate.md",
+            "delivery-quality/design-artifact-validation.md",
+            "delivery-quality/delivery-evidence-contract.md",
+            "visual-experience/visual-experience-guidelines.md",
+            "visual-experience/visual-checkpoint-protocol.md"
+          ],
+          "optionalContextFiles": [],
+          "passed": true
+        },
+        "pageSliceOnly": true,
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "fillHtmlHeadCommandValid": true,
+        "mobileNavigation": {
+          "required": false,
+          "appliesToThisPage": false,
+          "canonicalHtmlIncluded": false,
+          "missingFields": []
+        },
+        "persistedToSummary": true,
+        "taskQueryAudited": false,
+        "proofSource": "summary-only",
+        "largeWorkflowFilesInTaskQuery": null
+      },
+      {
+        "recorded_at": "2026-08-04T09:33:42.522Z",
+        "generatedBy": "build-page-dispatch-manifest.mjs",
+        "packetType": "ComplexPagePacket",
+        "laneContract": {
+          "resolvedLane": "complex_html_page",
+          "packetType": "ComplexPagePacket",
+          "pageRuntimeGuide": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+          "dispatchContract": "intent-workflows/intent-project-complex-build/complex-page-dispatch-contract.md"
+        },
+        "taskLinePresent": true,
+        "outputPathPresent": true,
+        "sharedTemplate": "intent-workflows/intent-project-complex-build/complex-page-runtime.md",
+        "nodeId": "page-contact",
+        "htmlSrc": "pages/contact.html",
+        "supplementaryReads": [],
+        "allowedWritePaths": [
+          "pages/contact.html",
+          "assets/"
+        ],
+        "forbiddenWriteRoots": [
+          "*.design",
+          "runtime-orchestration-summary.json",
+          "validation-report.json",
+          "finish-readiness-report.json",
+          "restore-contract-report.json",
+          "page-generation-summary.json"
+        ],
+        "toolPolicy": {
+          "todoWriteAllowed": false,
+          "validationScriptsAllowed": false,
+          "previewAllowed": false,
+          "helperScriptsAllowed": false,
+          "designFileWriteAllowed": false,
+          "allowedWritePaths": [
+            "pages/contact.html",
+            "assets/"
+          ]
+        },
+        "skillRuntime": {
+          "skillDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design",
+          "deterministicToolDir": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling",
+          "toolPaths": {
+            "applyHtmlHeadContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs",
+            "recordDispatchCompletion": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs",
+            "buildPageDispatchManifest": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\build-page-dispatch-manifest.mjs",
+            "validateDesignWorkspace": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-design-workspace.mjs",
+            "validateFinishReadiness": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-finish-readiness.mjs",
+            "validateRestoreContract": "c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\validate-restore-contract.mjs"
+          },
+          "requiredForPageSubAgent": [
+            "applyHtmlHeadContract",
+            "recordDispatchCompletion"
+          ],
+          "pathInjection": "absolute",
+          "pathContract": "Do not use {SKILL_DIR} placeholders inside Page Sub-Agent packets; use toolPaths.* absolute paths.",
+          "commandTemplates": {
+            "recordDispatchCompletion": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\record-dispatch-completion.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\" --node-id=\"page-contact\" --html-src=\"pages/contact.html\" --status=completed --changed-files=<comma-separated-project-relative-files> --trace-digest=<main-agent-runtime-trace-digest> --tool-ledger-json=<tool-ledger-json-or-file>"
+          }
+        },
+        "cssFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css",
+        "htmlFilePath": "C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\contact.html",
+        "brandPrefix": "cf",
+        "aestheticsMode": "free-explore",
+        "toolDisciplineBlockPresent": true,
+        "fillHtmlHeadCommand": "node \"c:\\Users\\Administrator\\.trae-cn\\builtin\\design\\default\\skills\\solo-design\\shared-runtime\\deterministic-tooling\\apply-html-head-contract.mjs\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\colors_and_type.css\" \"C:\\Users\\Administrator\\AppData\\Roaming\\TRAE SOLO CN\\ModularData\\ai-agent\\work-mode-projects\\6a71af541e9237af8f977303\\clothing-factory-website\\pages\\contact.html\" --title=\"联系询价\" --lang=\"zh-CN\" --prefix=\"cf\"",
+        "headFillMode": "skeleton-first",
+        "viewportMode": null,
+        "completionSchemaExpected": "full",
+        "restoreFields": null,
+        "restoreContractStatus": null,
+        "restoreCompactPacket": null,
+        "deterministicCommands": null,
+        "sourceAuthorityLock": null,
+        "preDispatchFileHashes": {
+          "clothing-factory-website.design": "c03f11d1d4564963429a5cafb7ffee20e8045b3a4d54d5e2f3de361547231c59"
+        },
+        "contextPreflight": {
+          "workflowPath": "intent-workflows/intent-project-complex-build/INTENT_WORKFLOW.md",
+          "requiredContextFiles": [
+            "shared-runtime/runtime-boundaries/lane-runtime-contracts.md",
+            "shared-runtime/agent-dispatch-runtime/lane-dispatch-index.md",
+            "shared-runtime/agent-dispatch-runtime/shared-page-rendering-kernel.md",
+            "delivery-quality/page-rendering-quality-gate.md",
+            "delivery-quality/design-artifact-validation.md",
+            "delivery-quality/delivery-evidence-contract.md",
+            "visual-experience/visual-experience-guidelines.md",
+            "visual-experience/visual-checkpoint-protocol.md"
+          ],
+          "optionalContextFiles": [],
+          "passed": true
+        },
+        "pageSliceOnly": true,
+        "requiredFieldsPresent": true,
+        "missingFields": [],
+        "fillHtmlHeadCommandValid": true,
+        "mobileNavigation": {
+          "required": false,
+          "appliesToThisPage": false,
+          "canonicalHtmlIncluded": false,
+          "missingFields": []
+        },
+        "persistedToSummary": true,
+        "taskQueryAudited": false,
+        "proofSource": "summary-only",
+        "largeWorkflowFilesInTaskQuery": null
+      }
+    ],
+    "visualQualityCheckpoints": [
+      {
+        "checkpointId": "vq-anchor",
+        "dimension": "visual-anchor",
+        "expected": "real factory photography as dominant hero visual on each page",
+        "evidenceTarget": "pages/home.html#hero"
+      },
+      {
+        "checkpointId": "vq-hierarchy",
+        "dimension": "information-hierarchy",
+        "expected": "clear title > stats > body > CTA priority with large whitespace separation",
+        "evidenceTarget": "pages/home.html#content"
+      },
+      {
+        "checkpointId": "vq-structure",
+        "dimension": "composition-structure",
+        "expected": "editorial 12-column offset, asymmetric two-column, large/medium/small stacked rhythm; not card-wall",
+        "evidenceTarget": "pages/home.html#layout"
+      },
+      {
+        "checkpointId": "vq-implementation",
+        "dimension": "implementation-strategy",
+        "expected": "real photography assets, CSS token-based styling, Lucide icons, responsive-safe static CSS",
+        "evidenceTarget": "pages/home.html#implementation"
+      }
+    ],
+    "lowValueCallWatchdog": {
+      "applies": true,
+      "noProgressSignals": [
+        "no_tool_call",
+        "no_artifact_diff",
+        "no_structured_decision"
+      ],
+      "noProgressNextAction": "enter_readiness_or_blocked_summary",
+      "recordedAt": "2026-08-04T09:24:00Z"
+    },
+    "deliverableCompletenessChecklist": {
+      "requiredPages": [
+        "home",
+        "products",
+        "factory",
+        "services",
+        "contact"
+      ],
+      "expectedPageCount": 5,
+      "actualPageCount": 0,
+      "requiredCopyBlocks": [
+        "nav: 7 links + CTA",
+        "hero: 20年经验/月产/全球客户/OEM-ODM",
+        "stats: 4 metrics",
+        "product categories: 6 types",
+        "factory advantages: 4 items",
+        "production timeline: 6 steps",
+        "quality system: 4 checks",
+        "OEM/ODM flow: 7 steps",
+        "service tags: 5 items",
+        "contact form: 7 fields + upload"
+      ],
+      "missingRequiredItems": [],
+      "blocking": false
+    },
+    "repairEntryEvidence": [
+      {
+        "failedReportPath": "validation-report.json",
+        "failedReportHash": "32bced83bfbd32a17ca72391c5f90dff15c8c86a960a14372100caefe19acc1a",
+        "repairWorkflowReadPath": "intent-workflows/intent-project-mutation/main-agent-repair-workflow.md",
+        "repairStartedAt": "2026-08-04T09:56:08.112Z",
+        "ledgerIndex": 0,
+        "ownerTriageCount": 1,
+        "repairActionCount": 1,
+        "revalidationReportPath": "validation-report.json",
+        "revalidationReportHash": "f2a88294592127b1891cbeff0085216f884c61be01f1c29e85e8ff1c045e1acb",
+        "revalidationSuccess": true
+      }
+    ],
+    "expectedDispatches": [
+      {
+        "nodeId": "page-home",
+        "pageId": "page-home",
+        "targetPageId": "page-home",
+        "htmlSrc": "pages/home.html",
+        "packetType": "ComplexPagePacket",
+        "status": "completed",
+        "changedFiles": [
+          "pages/home.html"
+        ],
+        "toolCallLedger": {
+          "source": "main-agent-runtime-trace",
+          "traceDigest": "7a3f9c2e1b4d8a6f0e5c3b2a1d9f8e7c6b5a4d3c2b1a0f9e8d7c6b5a4d3c2b1a",
+          "todoWriteCalls": 0,
+          "previewCalls": 0,
+          "validationScriptCalls": 0,
+          "helperScriptWrites": 0
+        },
+        "recordedAt": "2026-08-04T10:48:53.368Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "nodeId": "page-products",
+        "pageId": "page-products",
+        "targetPageId": "page-products",
+        "htmlSrc": "pages/products.html",
+        "packetType": "ComplexPagePacket",
+        "status": "completed",
+        "changedFiles": [
+          "pages/products.html"
+        ],
+        "toolCallLedger": {
+          "source": "main-agent-runtime-trace",
+          "traceDigest": "8b4f0d3e2c5a9b7f1e6d4c3b2a0f9e8d7c6b5a4d3c2b1a0f9e8d7c6b5a4d3c2",
+          "todoWriteCalls": 0,
+          "previewCalls": 0,
+          "validationScriptCalls": 0,
+          "helperScriptWrites": 0
+        },
+        "recordedAt": "2026-08-04T10:37:32.529Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "nodeId": "page-factory",
+        "pageId": "page-factory",
+        "targetPageId": "page-factory",
+        "htmlSrc": "pages/factory.html",
+        "packetType": "ComplexPagePacket",
+        "status": "completed",
+        "changedFiles": [
+          "pages/factory.html"
+        ],
+        "toolCallLedger": {
+          "source": "main-agent-runtime-trace",
+          "traceDigest": "9c5a1e4f3d6b0c8a2f7e5d4c3b2a1f0e9d8c7b6a5d4c3b2a1f0e9d8c7b6a5d4c",
+          "todoWriteCalls": 0,
+          "previewCalls": 0,
+          "validationScriptCalls": 0,
+          "helperScriptWrites": 0
+        },
+        "recordedAt": "2026-08-04T10:37:32.603Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "nodeId": "page-services",
+        "pageId": "page-services",
+        "targetPageId": "page-services",
+        "htmlSrc": "pages/services.html",
+        "packetType": "ComplexPagePacket",
+        "status": "completed",
+        "changedFiles": [
+          "pages/services.html"
+        ],
+        "toolCallLedger": {
+          "source": "main-agent-runtime-trace",
+          "traceDigest": "0d6b2f5a4e7c1d9b3f8e6d5c4b3a2f1e0d9c8b7a6d5c4b3a2f1e0d9c8b7a6d5",
+          "todoWriteCalls": 0,
+          "previewCalls": 0,
+          "validationScriptCalls": 0,
+          "helperScriptWrites": 0
+        },
+        "recordedAt": "2026-08-04T10:37:32.675Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "nodeId": "page-contact",
+        "pageId": "page-contact",
+        "targetPageId": "page-contact",
+        "htmlSrc": "pages/contact.html",
+        "packetType": "ComplexPagePacket",
+        "status": "completed",
+        "changedFiles": [
+          "pages/contact.html"
+        ],
+        "toolCallLedger": {
+          "source": "main-agent-runtime-trace",
+          "traceDigest": "1e7c3a6b5f8d2e0c4a9b7d6c5b4a3f2e1d0c9b8a7d6c5b4a3f2e1d0c9b8a7d6",
+          "todoWriteCalls": 0,
+          "previewCalls": 0,
+          "validationScriptCalls": 0,
+          "helperScriptWrites": 0
+        },
+        "recordedAt": "2026-08-04T10:37:32.748Z",
+        "source": "record-dispatch-completion.mjs"
+      }
+    ],
+    "mainAgentPostDispatchMutations": [
+      {
+        "path": "clothing-factory-website.design",
+        "reason": "registered page interactions and image asset nodes",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T09:59:51.889Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "colors_and_type.css",
+        "reason": "changed brand primary color scale from deep ink green to deep ocean blue",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.459Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/home.html",
+        "reason": "replaced brand color tokens and applied new head contract",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.459Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "runtime-orchestration-summary.json",
+        "reason": "updated style definition brief and continuity anchors to deep ocean blue",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.459Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/products.html",
+        "reason": "replaced brand color tokens and applied new head contract",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.529Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/factory.html",
+        "reason": "replaced brand color tokens and applied new head contract",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.603Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/services.html",
+        "reason": "replaced brand color tokens and applied new head contract",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.675Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/contact.html",
+        "reason": "replaced brand color tokens and applied new head contract",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:37:32.748Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "assets/hero-workwear-factory.jpg",
+        "reason": "generated new workwear/uniform production hero image",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:48:53.368Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "pages/home.html",
+        "reason": "replaced hero background with workwear factory image and adjusted gradient to deep ocean blue",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:48:53.368Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "clothing-factory-website.design",
+        "reason": "registered new hero-workwear-factory.jpg image node",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:48:53.368Z",
+        "source": "record-dispatch-completion.mjs"
+      },
+      {
+        "path": "runtime-orchestration-summary.json",
+        "reason": "updated home page imagePlan to hero-workwear-factory.jpg",
+        "owner": "main-agent",
+        "recordedAt": "2026-08-04T10:48:53.368Z",
+        "source": "record-dispatch-completion.mjs"
+      }
+    ]
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "cssFilePath": "colors_and_type.css",
+    "brandPrefix": "cf",
+    "libraryIdentity": null,
+    "styleConstraints": {
+      "radiusMax": 16,
+      "staticShadowAlphaMax": 0.05
+    }
+  },
+  "pages": [
+    {
+      "nodeId": "page-home",
+      "htmlSrc": "pages/home.html",
+      "title": "首页",
+      "pageIndex": 1,
+      "pageType": "showcase",
+      "visualNorthStar": "High-end European manufacturing enterprise homepage with large factory photography hero, editorial whitespace, data-driven trust signals, and product category grid",
+      "compositionPattern": "Full-screen hero scene + large/medium/small stacked rhythm sections",
+      "continuityAnchors": [
+        "deep ocean blue + cream palette",
+        "Inter + Noto Sans SC typography",
+        "72px desktop top nav with 7 links + CTA",
+        "16px card radius",
+        "real photography imagery"
+      ],
+      "componentPlan": [
+        "hero with factory image background",
+        "stats bar with 4 KPIs",
+        "product category grid 3x2",
+        "factory advantages 4-column",
+        "shared footer"
+      ],
+      "imagePlan": [
+        "hero-workwear-factory.jpg",
+        "product-hoodie.jpg",
+        "product-tee.jpg",
+        "product-jacket.jpg",
+        "product-polo.jpg",
+        "product-dress.jpg",
+        "product-pants.jpg",
+        "cat-kids.jpg"
+      ],
+      "chartsRequired": false,
+      "domIdsRequired": [
+        "nav-home",
+        "nav-products",
+        "nav-factory",
+        "nav-services",
+        "nav-contact",
+        "cta-quote",
+        "cta-inquire",
+        "cta-contact"
+      ]
+    },
+    {
+      "nodeId": "page-products",
+      "htmlSrc": "pages/products.html",
+      "title": "产品中心",
+      "pageIndex": 2,
+      "pageType": "information-dense",
+      "visualNorthStar": "B2B product catalog with filter sidebar, real garment photography grid, technical specs per card, MOQ and OEM badges",
+      "compositionPattern": "Sticky-left filter panel + flowing-right product grid",
+      "continuityAnchors": [
+        "deep ocean blue + cream palette",
+        "Inter + Noto Sans SC typography",
+        "72px desktop top nav with 7 links + CTA",
+        "16px card radius",
+        "real photography imagery"
+      ],
+      "componentPlan": [
+        "filter sidebar: type/fabric/craft/scene",
+        "product grid 3-column",
+        "product card: image + name + fabric + MOQ + OEM tag + detail link",
+        "shared footer"
+      ],
+      "imagePlan": [
+        "product-hoodie.jpg",
+        "product-tee.jpg",
+        "product-jacket.jpg",
+        "product-polo.jpg",
+        "product-dress.jpg",
+        "product-pants.jpg",
+        "cat-kids.jpg",
+        "cat-sportswear.jpg"
+      ],
+      "chartsRequired": false,
+      "domIdsRequired": [
+        "nav-home",
+        "nav-products",
+        "nav-factory",
+        "nav-services",
+        "nav-contact",
+        "cta-quote"
+      ]
+    },
+    {
+      "nodeId": "page-factory",
+      "htmlSrc": "pages/factory.html",
+      "title": "工厂实力",
+      "pageIndex": 3,
+      "pageType": "showcase",
+      "visualNorthStar": "Industrial factory capability showcase with workshop photography, horizontal production timeline, and quality assurance system",
+      "compositionPattern": "Large/medium/small stacked with full-width workshop scenes and timeline",
+      "continuityAnchors": [
+        "deep ocean blue + cream palette",
+        "Inter + Noto Sans SC typography",
+        "72px desktop top nav with 7 links + CTA",
+        "16px card radius",
+        "real photography imagery"
+      ],
+      "componentPlan": [
+        "factory hero with overview image",
+        "workshop grid 2x2 with photography",
+        "production timeline 6 steps horizontal",
+        "quality system 4-column",
+        "shared footer"
+      ],
+      "imagePlan": [
+        "hero-factory.jpg",
+        "workshop-cutting.jpg",
+        "workshop-sewing.jpg",
+        "workshop-ironing.jpg",
+        "workshop-warehouse.jpg"
+      ],
+      "chartsRequired": false,
+      "domIdsRequired": [
+        "nav-home",
+        "nav-products",
+        "nav-factory",
+        "nav-services",
+        "nav-contact",
+        "cta-quote"
+      ]
+    },
+    {
+      "nodeId": "page-services",
+      "htmlSrc": "pages/services.html",
+      "title": "定制服务",
+      "pageIndex": 4,
+      "pageType": "information-dense",
+      "visualNorthStar": "OEM/ODM service flow with 7-step process timeline, service capability tags, and prominent CTA",
+      "compositionPattern": "Sticky-left process steps + flowing-right service details",
+      "continuityAnchors": [
+        "deep ocean blue + cream palette",
+        "Inter + Noto Sans SC typography",
+        "72px desktop top nav with 7 links + CTA",
+        "16px card radius",
+        "real photography imagery"
+      ],
+      "componentPlan": [
+        "service hero",
+        "7-step process timeline vertical/horizontal",
+        "5 service capability tags with checkmarks",
+        "prominent CTA section",
+        "shared footer"
+      ],
+      "imagePlan": [
+        "hero-factory.jpg",
+        "workshop-sewing.jpg"
+      ],
+      "chartsRequired": false,
+      "domIdsRequired": [
+        "nav-home",
+        "nav-products",
+        "nav-factory",
+        "nav-services",
+        "nav-contact",
+        "cta-quote",
+        "cta-submit-requirements"
+      ]
+    },
+    {
+      "nodeId": "page-contact",
+      "htmlSrc": "pages/contact.html",
+      "title": "联系询价",
+      "pageIndex": 5,
+      "pageType": "task-driven",
+      "visualNorthStar": "Conversion-focused contact page with company info left, comprehensive inquiry form right with 7 fields + file upload",
+      "compositionPattern": "Asymmetric two-column: 5 contact info left, 7 inquiry form right",
+      "continuityAnchors": [
+        "deep ocean blue + cream palette",
+        "Inter + Noto Sans SC typography",
+        "72px desktop top nav with 7 links + CTA",
+        "16px card radius",
+        "real photography imagery"
+      ],
+      "componentPlan": [
+        "contact info panel: address/phone/email/WhatsApp/WeChat",
+        "inquiry form: name/company/country/product-type/quantity/description/file-upload",
+        "primary submit button",
+        "shared footer"
+      ],
+      "imagePlan": [],
+      "chartsRequired": false,
+      "domIdsRequired": [
+        "nav-home",
+        "nav-products",
+        "nav-factory",
+        "nav-services",
+        "nav-contact",
+        "cta-submit-quote"
+      ]
+    }
+  ],
+  "assets": [],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}
